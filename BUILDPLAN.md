@@ -8,7 +8,7 @@ Purpose: Realtor directory and lead generation. Leads route to Nathan via email.
 
 ## Session Tracker
 - [x] Session 1 — Scaffold, folder structure, design tokens, fonts
-- [ ] Session 2 — Navbar, Footer, LeadForm components
+- [x] Session 2 — Navbar, Footer, LeadForm components
 - [ ] Session 3 — Homepage sections
 - [ ] Session 4 — All inner page routes with metadata
 - [ ] Session 5 — Contact API route + JSON-LD schema

@@ -6,14 +6,14 @@ import { organizationSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: "About Calgary Realtor Finder | Alberta's Independent Realtor Directory",
   description:
-    'Calgary Realtor Finder is an independent Alberta realtor matching service. We connect home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our process.',
+    'Calgary Realtor Finder connects Alberta home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our independent matching service.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/about',
   },
   openGraph: {
     title: "About Calgary Realtor Finder | Alberta's Independent Realtor Directory",
     description:
-      'Calgary Realtor Finder is an independent Alberta realtor matching service. We connect home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our process.',
+      'Calgary Realtor Finder connects Alberta home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our independent matching service.',
     url: 'https://calgaryrealtorfinder.ca/about',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',

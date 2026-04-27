@@ -7,14 +7,14 @@ import { breadcrumbSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'Contact Calgary Realtor Finder | Get Matched With a Calgary REALTOR®',
   description:
-    "Get matched with a licensed Calgary REALTOR® today. Fill out our form and we'll introduce you to the right agent for your neighbourhood and price range. Free, no obligation.",
+    "Get matched with a licensed Calgary REALTOR® today. We'll connect you with the right agent for your neighbourhood and budget. Free, no obligation.",
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/contact',
   },
   openGraph: {
     title: 'Contact Calgary Realtor Finder | Get Matched With a Calgary REALTOR®',
     description:
-      "Get matched with a licensed Calgary REALTOR® today. Fill out our form and we'll introduce you to the right agent for your neighbourhood and price range. Free, no obligation.",
+      "Get matched with a licensed Calgary REALTOR® today. We'll connect you with the right agent for your neighbourhood and budget. Free, no obligation.",
     url: 'https://calgaryrealtorfinder.ca/contact',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',

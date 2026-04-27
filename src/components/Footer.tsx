@@ -2,20 +2,20 @@ import Link from 'next/link'
 
 const quickLinks = [
   { label: 'Find a Realtor', href: '/' },
-  { label: 'How it works', href: '/how-it-works' },
-  { label: 'Featured agents', href: '/featured-agents' },
-  { label: 'Buying guide', href: '/buying-guide' },
-  { label: 'Selling guide', href: '/selling-guide' },
+  { label: 'How to choose a realtor', href: '/how-to-choose-a-realtor-calgary' },
+  { label: 'Top Calgary agents', href: '/top-realtors-calgary' },
+  { label: 'Alberta cities', href: '/alberta-cities' },
+  { label: 'About us', href: '/about' },
   { label: 'Resources & FAQ', href: '/resources' },
 ]
 
 const neighbourhoodLinks = [
-  { label: 'Calgary NE', href: '/calgary-realtors/ne' },
-  { label: 'Calgary NW', href: '/calgary-realtors/nw' },
-  { label: 'Calgary SW', href: '/calgary-realtors/sw' },
-  { label: 'Calgary SE', href: '/calgary-realtors/se' },
-  { label: 'City Centre', href: '/calgary-realtors/city-centre' },
-  { label: 'Airdrie · Cochrane · Okotoks', href: '/calgary-realtors/surrounding' },
+  { label: 'Calgary NE', href: '/calgary-ne-realtors' },
+  { label: 'Calgary NW', href: '/calgary-nw-realtors' },
+  { label: 'Calgary SW', href: '/calgary-sw-realtors' },
+  { label: 'Calgary SE', href: '/calgary-se-realtors' },
+  { label: 'City Centre', href: '/calgary-city-centre-realtors' },
+  { label: 'Airdrie · Cochrane · Okotoks', href: '/alberta-cities' },
 ]
 
 export default function Footer() {

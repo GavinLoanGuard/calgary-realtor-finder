@@ -8,6 +8,7 @@ import FAQAccordion from '@/components/FAQAccordion'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { albertaCities } from '@/data/cities'
+import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
 
 const placeholderProperties = [
   {
@@ -52,10 +53,48 @@ const distanceLabels: Record<string, string> = {
   okotoks: 'SOUTH · 30 MIN',
 }
 
+const homepageSchema = JSON.stringify([
+  organizationSchema,
+  nathanSchema,
+  localBusinessSchema('Calgary', 51.0447, -114.0719),
+  faqSchema([
+    {
+      question: 'How many REALTORS® are in Calgary?',
+      answer:
+        'As of the most recent CREB® count, there are roughly 7,400 licensed REALTORS® serving the Calgary metropolitan area.',
+    },
+    {
+      question: 'How do I find a realtor in Calgary?',
+      answer:
+        'Use our free matching service. Fill out our form with your neighbourhood, timeline, and budget and we will introduce you to a RECA-licensed REALTOR® who specializes in your area within a few hours.',
+    },
+    {
+      question: 'What does a Calgary realtor cost?',
+      answer:
+        'Commissions in Alberta are negotiable. Typical residential transactions see total commission between 5% and 7% split between listing and buyer brokerages. Buyers generally pay nothing out of pocket.',
+    },
+    {
+      question: 'Is Calgary Realtor Finder free to use?',
+      answer:
+        'Yes. Our matching service is completely free for buyers and sellers. We receive a referral fee from the agent only when a transaction closes. There is no obligation to proceed after being matched.',
+    },
+    {
+      question: 'How do I know if a Calgary realtor is licensed?',
+      answer:
+        'All Alberta REALTORS® are licensed through RECA — the Real Estate Council of Alberta. Search the RECA public registry at reca.ca by agent name to verify license status, brokerage, and disciplinary history.',
+    },
+  ]),
+])
+
 export default function Home() {
   return (
-    <main className="bg-background">
-      <Navbar />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: homepageSchema }}
+      />
+      <main className="bg-background">
+        <Navbar />
 
       {/* Section 1 — Hero */}
       <HeroSection />
@@ -284,7 +323,8 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
-    </main>
+        <Footer />
+      </main>
+    </>
   )
 }

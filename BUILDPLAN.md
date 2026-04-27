@@ -11,8 +11,8 @@ Purpose: Realtor directory and lead generation. Leads route to Nathan via email.
 - [x] Session 2 — Navbar, Footer, LeadForm components
 - [x] Session 3 — Homepage sections
 - [x] Session 4 — All inner page routes with metadata
-- [ ] Session 5 — Contact API route + JSON-LD schema
-- [ ] Session 6 — Sitemap, robots.txt, SEO metadata audit
+- [x] Session 5 — Contact API route + JSON-LD schema + SEO audit
+- [ ] Session 6 — Sitemap, robots.txt, SEO metadata audit (sitemap/robots built in S4; repurpose for performance/image optimisation)
 - [ ] Session 7 — Real content, Nathan's data, launch prep
 
 ## Colour Tokens
@@ -31,6 +31,25 @@ Purpose: Realtor directory and lead generation. Leads route to Nathan via email.
 
 ## Do Not Touch (completed files — locked)
 None yet.
+
+## Pre-Launch Checklist (Session 7)
+- [ ] Replace `[NATHAN_PHONE]` placeholder in `src/data/schema.ts`
+- [ ] Replace `[NATHAN_LICENSE_NUMBER]` placeholder in `src/components/Footer.tsx`
+- [ ] Add Nathan's real headshot to `public/images/nathan.jpg` and wire into RealtorProfile
+- [ ] Populate 3 real client reviews in `src/components/RealtorProfile.tsx`
+- [ ] Replace placeholder listings (PropertyCard) with real MLS/Pillar 9 embed from Nathan
+- [ ] Add real RECA license number to `nathanSchema` in `src/data/schema.ts`
+- [ ] Set real `RESEND_API_KEY` in production environment (Vercel env vars)
+- [ ] Set real `NATHAN_EMAIL` in production environment
+- [ ] Set real `GAVIN_EMAIL` in production environment
+- [ ] Point DNS for `calgaryrealtorfinder.ca` to Vercel deployment
+- [ ] Verify `NEXT_PUBLIC_SITE_URL` is set to `https://calgaryrealtorfinder.ca` in Vercel
+- [ ] Test contact form end-to-end: submit → confirm Nathan receives lead email, user receives confirmation
+- [ ] Submit sitemap `https://calgaryrealtorfinder.ca/sitemap.xml` to Google Search Console
+- [ ] Verify all 15 inner pages have unique H1 and description in Search Console coverage report
+- [ ] Fill in placeholder content sections (all pages currently show `[ Full content coming in Session 7 ]`)
+- [ ] Add real Open Graph / social share images to `public/og/` and wire into metadata
+- [ ] Review RECA advertising standards compliance for all copy before go-live
 
 ## Notes
 - MLS/Pillar 9 feed to be integrated in Session 7 via iframe embed from Nathan

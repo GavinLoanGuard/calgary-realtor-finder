@@ -6,14 +6,14 @@ import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'Top Realtors in Calgary 2026 | Calgary Realtor Finder',
   description:
-    'Find top-rated Calgary realtors with verified reviews and transaction history. Our featured agents are RECA-licensed and independently vetted. Free matching service.',
+    'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are RECA-licensed and independently vetted. Free matching.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/top-realtors-calgary',
   },
   openGraph: {
     title: 'Top Realtors in Calgary 2026 | Calgary Realtor Finder',
     description:
-      'Find top-rated Calgary realtors with verified reviews and transaction history. Our featured agents are RECA-licensed and independently vetted. Free matching service.',
+      'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are RECA-licensed and independently vetted. Free matching.',
     url: 'https://calgaryrealtorfinder.ca/top-realtors-calgary',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',

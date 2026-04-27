@@ -3,9 +3,47 @@ import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
 import NeighbourhoodTile from '@/components/NeighbourhoodTile'
 import CityCard from '@/components/CityCard'
+import PropertyCard from '@/components/PropertyCard'
+import FAQAccordion from '@/components/FAQAccordion'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { albertaCities } from '@/data/cities'
+
+const placeholderProperties = [
+  {
+    badge: 'NEW · 2 DAYS',
+    neighbourhood: 'Mahogany',
+    price: '$729,000',
+    address: '142 Masters Heights SE',
+    suburb: 'Mahogany, Calgary SE · T3M 2N7',
+    beds: 4,
+    baths: 3.5,
+    sqft: 2184,
+    status: 'NEW' as const,
+  },
+  {
+    badge: 'OPEN SAT 1-3',
+    neighbourhood: 'Beltline',
+    price: '$439,000',
+    address: '#1402, 215 13 Ave SW',
+    suburb: 'Beltline, City Centre · T2R 0V1',
+    beds: 2,
+    baths: 2,
+    sqft: 1012,
+    status: 'OPEN' as const,
+  },
+  {
+    badge: 'PRICE DROP',
+    neighbourhood: 'Tuscany',
+    price: '$865,000',
+    address: '88 Tuscany Estates Cres NW',
+    suburb: 'Tuscany, Calgary NW · T3L 0B5',
+    beds: 5,
+    baths: 4,
+    sqft: 2940,
+    status: 'PRICE DROP' as const,
+  },
+]
 
 const distanceLabels: Record<string, string> = {
   'city-centre': 'CORE',
@@ -155,6 +193,93 @@ export default function Home() {
                 dark
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 7 — Editorial + FAQ */}
+      <section className="bg-background py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-inter text-accent text-xs uppercase tracking-widest">RESOURCES</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-8">
+            {/* Left — Article */}
+            <div>
+              <h2 className="font-playfair text-4xl text-primary">
+                How to find the right realtor in Calgary.
+              </h2>
+              <p className="font-inter text-charcoal/60 text-lg mt-3 leading-relaxed">
+                A practical guide to choosing an agent who'll actually advocate for you — written
+                for first-time buyers and seasoned sellers alike.
+              </p>
+              <div className="mt-8 font-inter text-charcoal/70 text-base leading-relaxed space-y-4">
+                <p>
+                  <span className="font-playfair text-5xl font-bold text-primary float-left leading-none mr-2 mt-1">C</span>
+                  hoosing a Calgary REALTOR® is one of the more consequential decisions you'll
+                  make in any given decade — and yet most buyers spend more time picking a
+                  contractor than picking the agent who'll guide a half-million-dollar transaction.
+                  The right agent in Calgary isn't the one with the biggest bus-bench ad or the
+                  loudest Instagram presence. It's the one who knows the difference between Tuscany
+                  and Tuscany Estates, who can tell you in plain language why a McKenzie Towne
+                  walkout sells for less than its Cranston counterpart, and who has actually written
+                  offers on streets you're considering.
+                </p>
+                <p>
+                  Look for three things. First, a current RECA licence — every practicing agent in
+                  Alberta is required to hold one, and you can verify it in seconds on the Real
+                  Estate Council of Alberta's public registry. Second, neighbourhood specificity. An
+                  agent who claims to 'serve all of Calgary' is rarely as useful as one who has
+                  closed eight deals on your street in the last two years. Third, a communication
+                  style that matches yours. You'll be exchanging messages weekly, sometimes daily,
+                  for months. If their first email feels rushed or generic, the rest of the
+                  relationship will too.
+                </p>
+                <p>
+                  The good news: Calgary's REALTOR® pool is deep, regulated, and accountable. The
+                  agents we feature have all been independently vetted for license status, brokerage
+                  standing, and recent transaction history. Use the form at the top of this page and
+                  we'll introduce you to one — no fee, no commitment, no spam.
+                </p>
+              </div>
+              <p className="font-inter text-charcoal/40 text-xs uppercase tracking-widest mt-8 border-t border-charcoal/10 pt-4">
+                — THE CALGARY REALTOR FINDER EDITORIAL DESK · UPDATED APRIL 2026
+              </p>
+            </div>
+
+            {/* Right — FAQ */}
+            <div>
+              <FAQAccordion />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8 — MLS Listings Strip */}
+      <section className="bg-background py-20 px-8 border-t border-charcoal/10">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-inter text-accent text-xs uppercase tracking-widest">
+            LIVE MLS® LISTINGS
+          </p>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mt-2">
+            <h2 className="font-playfair text-4xl text-primary">
+              Current Calgary MLS® listings.
+            </h2>
+            <p className="font-inter text-charcoal/50 text-sm md:text-right max-w-xs">
+              A snapshot of active inventory across the city. Connect with a matched REALTOR® to
+              see the full picture.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            {placeholderProperties.map((prop) => (
+              <PropertyCard key={prop.address} {...prop} />
+            ))}
+          </div>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6 gap-3">
+            <p className="font-inter text-charcoal/30 text-xs uppercase tracking-widest">
+              LISTING DATA PROVIDED VIA ALBERTA MLS® SYSTEM · UPDATED DAILY
+            </p>
+            <button className="font-inter text-accent text-sm font-medium hover:text-accent-light transition-colors">
+              Browse all current listings →
+            </button>
           </div>
         </div>
       </section>

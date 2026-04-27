@@ -10,7 +10,7 @@ Purpose: Realtor directory and lead generation. Leads route to Nathan via email.
 - [x] Session 1 — Scaffold, folder structure, design tokens, fonts
 - [x] Session 2 — Navbar, Footer, LeadForm components
 - [x] Session 3 — Homepage sections
-- [ ] Session 4 — All inner page routes with metadata
+- [x] Session 4 — All inner page routes with metadata
 - [ ] Session 5 — Contact API route + JSON-LD schema
 - [ ] Session 6 — Sitemap, robots.txt, SEO metadata audit
 - [ ] Session 7 — Real content, Nathan's data, launch prep

@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
+import RealtorProfile from '@/components/RealtorProfile'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -31,6 +32,65 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Section 3 — Featured Realtor */}
+      <RealtorProfile />
+
+      {/* Section 4 — How It Works */}
+      <section className="bg-background py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+            <div>
+              <p className="font-inter text-accent text-xs tracking-widest uppercase">HOW IT WORKS</p>
+              <h2 className="font-playfair text-4xl text-primary font-bold mt-2 max-w-lg">
+                Three steps to the right Calgary agent.
+              </h2>
+            </div>
+            <p className="font-inter text-charcoal/50 text-sm lg:text-right max-w-xs shrink-0">
+              Most matches happen within a few hours. There's never a fee or obligation to work with
+              the agent we introduce.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            {[
+              {
+                step: '01',
+                label: 'TELL US',
+                heading: 'Tell us what you need.',
+                body: 'Fill out our quick form — buying or selling, neighbourhood, timeline, price range. Takes less than a minute.',
+              },
+              {
+                step: '02',
+                label: 'WE MATCH',
+                heading: 'We match you.',
+                body: 'We hand-pick a licensed Calgary REALTOR® who knows your neighbourhood, your price band, and your kind of home.',
+              },
+              {
+                step: '03',
+                label: 'YOU MOVE',
+                heading: 'Buy or sell with confidence.',
+                body: 'Your matched realtor handles the search, negotiation, paperwork, and inspection — start to keys-in-hand.',
+              },
+            ].map((card) => (
+              <div
+                key={card.step}
+                className="border border-charcoal/10 rounded-sm p-8 bg-white hover:border-accent hover:shadow-md transition-all"
+              >
+                <p className="font-inter text-charcoal/40 text-xs tracking-widest uppercase">
+                  {card.label}
+                </p>
+                <p className="font-playfair text-5xl font-bold text-accent/30 mt-1">{card.step}</p>
+                <h3 className="font-playfair text-xl text-primary font-semibold mt-4">
+                  {card.heading}
+                </h3>
+                <p className="font-inter text-charcoal/60 text-sm mt-3 leading-relaxed">
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </main>

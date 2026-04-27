@@ -1,7 +1,18 @@
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
+import NeighbourhoodTile from '@/components/NeighbourhoodTile'
+import CityCard from '@/components/CityCard'
 import Footer from '@/components/Footer'
+import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
+import { albertaCities } from '@/data/cities'
+
+const distanceLabels: Record<string, string> = {
+  'city-centre': 'CORE',
+  airdrie: 'NORTH · 30 MIN',
+  cochrane: 'WEST · 40 MIN',
+  okotoks: 'SOUTH · 30 MIN',
+}
 
 export default function Home() {
   return (
@@ -87,6 +98,62 @@ export default function Home() {
                   {card.body}
                 </p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 — Neighbourhood Grid */}
+      <section className="bg-background py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-inter text-accent text-xs tracking-widest uppercase">BY NEIGHBOURHOOD</p>
+          <h2 className="font-playfair text-4xl text-primary font-bold mt-2">
+            Find a realtor by Calgary neighbourhood.
+          </h2>
+          <p className="font-inter text-charcoal/60 text-lg mt-3 max-w-2xl leading-relaxed">
+            Calgary's quadrants each have their own market dynamics. Pick where you're looking —
+            we'll match you with an agent who works it daily.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            {calgaryNeighbourhoods.map((n) => (
+              <NeighbourhoodTile
+                key={n.slug}
+                name={n.name}
+                slug={n.slug}
+                quadrant={n.quadrant}
+                distanceLabel={distanceLabels[n.slug]}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 — Alberta Cities Strip */}
+      <section className="bg-primary py-20 px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
+            <div>
+              <p className="font-inter text-accent text-xs tracking-widest uppercase">ACROSS ALBERTA</p>
+              <h2 className="font-playfair text-4xl text-white font-bold mt-2">Beyond Calgary.</h2>
+              <p className="font-inter text-white/60 text-lg mt-3 max-w-lg leading-relaxed">
+                We connect home buyers and sellers with licensed REALTORS® across every major
+                market in Alberta.
+              </p>
+            </div>
+            <p className="font-inter text-white/60 text-sm lg:text-right max-w-xs shrink-0 lg:pt-16">
+              Click any city to start your match — same vetted process, same no-fee promise.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+            {albertaCities.map((city) => (
+              <CityCard
+                key={city.slug}
+                name={city.name}
+                slug={city.slug}
+                region={city.region}
+                agentCount={city.agentCount}
+                dark
+              />
             ))}
           </div>
         </div>

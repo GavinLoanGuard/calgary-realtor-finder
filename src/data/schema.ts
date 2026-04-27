@@ -1,3 +1,5 @@
+import { nathan } from './nathan'
+
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -22,16 +24,22 @@ export const organizationSchema = {
 export const nathanSchema = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
-  name: 'Nathan Koenigsberg',
-  url: 'https://nathankoenigsberg.ca',
+  name: nathan.name,
+  url: nathan.website,
+  image: `https://calgaryrealtorfinder.ca${nathan.photo}`,
   worksFor: {
     '@type': 'Organization',
-    name: 'RE/MAX First',
+    name: nathan.brokerage,
+    address: nathan.brokerageAddress,
   },
-  areaServed: ['Calgary', 'Airdrie', 'Okotoks', 'Alberta'],
+  areaServed: nathan.areasServed.map((area) => ({
+    '@type': 'City',
+    name: area,
+  })),
   hasCredential: 'RECA Licensed REALTOR®',
-  telephone: '[NATHAN_PHONE]',
-  email: 'nathan@nathankoenigsberg.ca',
+  telephone: nathan.phone,
+  email: nathan.email,
+  description: nathan.bio,
 }
 
 export function localBusinessSchema(city: string, lat: number, lng: number) {

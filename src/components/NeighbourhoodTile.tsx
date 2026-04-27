@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
 interface NeighbourhoodTileProps {
@@ -6,14 +7,36 @@ interface NeighbourhoodTileProps {
   slug: string
   quadrant: string | null
   distanceLabel?: string
+  imageSrc?: string
+  imageAlt?: string
 }
 
-export default function NeighbourhoodTile({ name, slug, quadrant, distanceLabel }: NeighbourhoodTileProps) {
+export default function NeighbourhoodTile({
+  name,
+  slug,
+  quadrant,
+  distanceLabel,
+  imageSrc,
+  imageAlt,
+}: NeighbourhoodTileProps) {
   const href = slug === 'city-centre' ? '/calgary-city-centre-realtors' : `/${slug}-realtors`
   const topLabel = quadrant ? `QUADRANT · ${quadrant}` : distanceLabel
 
   return (
-    <Link href={href} className="block aspect-square relative overflow-hidden rounded-sm cursor-pointer group bg-primary">
+    <Link
+      href={href}
+      className="block aspect-square relative overflow-hidden rounded-sm cursor-pointer group bg-primary"
+    >
+      {imageSrc ? (
+        <Image
+          src={imageSrc}
+          alt={imageAlt || `${name} Calgary`}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 50vw, 25vw"
+        />
+      ) : null}
+
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
 

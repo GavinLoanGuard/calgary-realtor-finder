@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { nathan } from '@/data/nathan'
 
 const quickLinks = [
   { label: 'Find a Realtor', href: '/' },
@@ -38,7 +39,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="mt-4 font-inter italic text-accent text-sm">
-              Alberta's local realtor resource.
+              Alberta&apos;s local realtor resource.
             </p>
             <p className="mt-4 font-inter text-white/60 text-sm leading-relaxed">
               An independent directory connecting Alberta home buyers and sellers with licensed,
@@ -95,11 +96,11 @@ export default function Footer() {
                 Featured partner
               </p>
               <p className="font-inter font-semibold text-white text-sm mt-2">
-                Nathan Koenigsberg
+                {nathan.name}
               </p>
-              <p className="font-inter text-white/60 text-sm">Independent Calgary REALTOR®</p>
+              <p className="font-inter text-white/60 text-sm">{nathan.title}</p>
               <p className="font-inter text-accent text-xs mt-1">
-                RE/MAX First · RECA #[NATHAN_LICENSE_NUMBER]
+                {nathan.brokerage} · RECA #{nathan.licenseNumber}
               </p>
               <Link
                 href="/contact"
@@ -125,8 +126,8 @@ export default function Footer() {
             </Link>
           </div>
           <p className="font-inter text-white/40 text-xs sm:text-right">
-            © 2026 Calgary Realtor Finder · Operated in partnership with Nathan Koenigsberg,
-            Independent Calgary REALTOR®
+            © 2026 Calgary Realtor Finder · Operated in partnership with {nathan.name},{' '}
+            {nathan.title}
           </p>
         </div>
       </div>

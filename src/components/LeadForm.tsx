@@ -40,6 +40,15 @@ export default function LeadForm({ variant }: LeadFormProps) {
       }),
     })
     setSubmitting(false)
+    if (typeof window !== 'undefined' && (window as any).dataLayer) {
+      ;(window as any).dataLayer.push({
+        event: 'realtor_match_request',
+        transaction_type: intent,
+        neighbourhood,
+        timeline,
+        price_range: priceRange,
+      })
+    }
     setSubmitted(true)
   }
 

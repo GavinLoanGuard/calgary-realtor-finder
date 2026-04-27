@@ -12,7 +12,7 @@ Purpose: Realtor directory and lead generation. Leads route to Nathan via email.
 - [x] Session 3 — Homepage sections
 - [x] Session 4 — All inner page routes with metadata
 - [x] Session 5 — Contact API route + JSON-LD schema + SEO audit
-- [ ] Session 6 — Sitemap, robots.txt, SEO metadata audit (sitemap/robots built in S4; repurpose for performance/image optimisation)
+- [x] Session 6 — Performance optimization, OG tags, GTM, Vercel config
 - [ ] Session 7 — Real content, Nathan's data, launch prep
 
 ## Colour Tokens
@@ -51,8 +51,25 @@ None yet.
 - [ ] Add real Open Graph / social share images to `public/og/` and wire into metadata
 - [ ] Review RECA advertising standards compliance for all copy before go-live
 
+## Post-Deploy Checklist
+- [ ] Vercel deployment live and accessible
+- [ ] Custom domain connected with SSL
+- [ ] All environment variables set in Vercel dashboard
+- [ ] Sitemap submitted to Google Search Console
+- [ ] Google Search Console verification token added to layout.tsx metadata
+- [ ] GTM container created and ID added to env vars
+- [ ] GA4 tag configured in GTM
+- [ ] Lead form tested end-to-end on production (real email send)
+- [ ] OG images created and uploaded to /public
+- [ ] Google Search Console showing pages indexed
+- [ ] robots.txt accessible at /robots.txt on production
+- [ ] 404 page tested
+- [ ] Redirects tested (/calgary → /calgary-realtors etc)
+
 ## Notes
 - MLS/Pillar 9 feed to be integrated in Session 7 via iframe embed from Nathan
 - Lead form emails via Resend — API key stored in .env.local as RESEND_API_KEY
 - BCC all lead emails to [GAVIN_EMAIL] — replace before launch
 - Nathan's real data needed for Session 7: license number, phone, headshot, reviews
+- Vercel region: iad1 (US East) — acceptable for launch; monitor if Canadian region becomes available
+- GTM renders nothing if NEXT_PUBLIC_GTM_ID env var is empty (safe for dev)

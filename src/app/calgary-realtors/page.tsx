@@ -18,6 +18,14 @@ export const metadata: Metadata = {
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
     type: 'website',
+    images: [
+      {
+        url: '/og-calgary-realtors.png',
+        width: 1200,
+        height: 630,
+        alt: 'Best Realtors in Calgary, Alberta — Calgary Realtor Finder',
+      },
+    ],
   },
 }
 

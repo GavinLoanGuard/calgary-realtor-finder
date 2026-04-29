@@ -34,7 +34,6 @@ None yet.
 
 ## Pre-Launch Checklist (Session 7)
 - [ ] Replace `[NATHAN_PHONE]` placeholder in `src/data/schema.ts`
-- [ ] Replace `[NATHAN_LICENSE_NUMBER]` placeholder in `src/components/Footer.tsx`
 - [ ] Add Nathan's real headshot to `public/images/nathan.jpg` and wire into RealtorProfile
 - [ ] Populate 3 real client reviews in `src/components/RealtorProfile.tsx`
 - [ ] Replace placeholder listings (PropertyCard) with real MLS/Pillar 9 embed from Nathan

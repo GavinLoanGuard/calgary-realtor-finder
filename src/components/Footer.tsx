@@ -100,7 +100,7 @@ export default function Footer() {
               </p>
               <p className="font-inter text-white/60 text-sm">{nathan.title}</p>
               <p className="font-inter text-accent text-xs mt-1">
-                {nathan.brokerage} · RECA #{nathan.licenseNumber}
+                {nathan.brokerage}
               </p>
               <Link
                 href="/contact"

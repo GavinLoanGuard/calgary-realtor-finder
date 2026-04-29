@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
@@ -5,10 +6,18 @@ import NeighbourhoodTile from '@/components/NeighbourhoodTile'
 import CityCard from '@/components/CityCard'
 import PropertyCard from '@/components/PropertyCard'
 import FAQAccordion from '@/components/FAQAccordion'
+import FAQSection from '@/components/FAQSection'
+import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { albertaCities } from '@/data/cities'
 import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
+
+export const metadata: Metadata = {
+  title: 'Find a Calgary REALTOR® | Free Matching Service | Calgary Realtor Finder',
+  description:
+    'Looking for a Calgary REALTOR®? Our free matching service connects buyers and sellers with licensed Calgary real estate agents who know your neighbourhood. Takes 60 seconds.',
+}
 
 const placeholderProperties = [
   {
@@ -322,6 +331,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section 9 — FAQ (AEO) */}
+      <FAQSection />
+
+      {/* Section 10 — Neighbourhood Grid (SEO) */}
+      <NeighbourhoodGrid />
 
         <Footer />
       </main>

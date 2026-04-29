@@ -32,13 +32,13 @@ export default function HeroSection() {
               CALGARY · BOW VALLEY · FOOTHILLS
             </p>
             <h1 className="font-playfair font-bold text-3xl lg:text-5xl text-white leading-tight mt-4">
-              Find the right Calgary{' '}
+              Find Your Calgary{' '}
               <em className="text-accent">REALTOR®</em>{' '}
-              for you.
+              — Matched to Your Needs
             </h1>
             <p className="font-inter text-lg text-white/70 mt-6 max-w-md leading-relaxed">
-              Connect with trusted, licensed Calgary real estate agents who actually know your
-              neighbourhood — from Inglewood walk-ups to Aspen Woods estates.
+              Skip the scroll on Realtor.ca. Tell us what you&apos;re looking for and we&apos;ll connect you with
+              the right Calgary real estate agent — free, no obligation.
             </p>
             <div className="flex flex-wrap gap-6 mt-8">
               {trustBadges.map((badge) => (

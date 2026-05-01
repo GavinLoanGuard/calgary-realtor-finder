@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 
 const navLinks = [
   { label: 'Find a Realtor', href: '/' },
@@ -12,8 +12,14 @@ const navLinks = [
   { label: 'Contact', href: '/contact' },
 ]
 
+const toolLinks = [
+  { label: 'Mortgage Calculator', href: '/tools/mortgage-affordability' },
+  { label: 'Commission Calculator', href: '/tools/realtor-commission' },
+]
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [toolsOpen, setToolsOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-primary">
@@ -42,6 +48,31 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+
+          {/* Tools dropdown */}
+          <div className="relative">
+            <button
+              className="flex items-center gap-1 font-inter font-medium text-sm text-white/80 hover:text-accent transition-colors"
+              onClick={() => setToolsOpen((o) => !o)}
+              onBlur={() => setTimeout(() => setToolsOpen(false), 150)}
+            >
+              Tools <ChevronDown size={14} className={`transition-transform ${toolsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {toolsOpen && (
+              <div className="absolute top-full left-0 mt-2 w-52 bg-white border border-charcoal/10 rounded-sm shadow-lg py-1 z-10">
+                {toolLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-2.5 font-inter text-sm text-charcoal/80 hover:text-accent hover:bg-charcoal/5 transition-colors"
+                    onClick={() => setToolsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Desktop right */}
@@ -78,6 +109,19 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="border-t border-white/10 pt-4">
+            <p className="font-inter text-white/40 text-xs uppercase tracking-widest mb-3">Tools</p>
+            {toolLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block font-inter font-medium text-sm text-white/80 hover:text-accent transition-colors mb-3"
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
           <Link
             href="/contact"
             className="mt-2 w-full bg-accent text-white font-inter font-semibold text-sm px-5 py-3 rounded-sm hover:bg-accent-light transition-colors text-center"

@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/alberta-cities',
     '/resources',
+    '/calgary-city-centre-realtors',
+    '/privacy',
+    '/terms',
+    '/accessibility',
   ]
 
   const neighbourhoodRoutes = [
@@ -34,6 +38,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calgary/hamptons',
     '/calgary/shawnee-slopes',
     '/calgary/arbour-lake',
+    '/calgary/mahogany',
+    '/calgary/evergreen',
+    '/calgary/copperfield',
+  ]
+
+  const toolRoutes = [
+    '/tools/mortgage-affordability',
+    '/tools/realtor-commission',
   ]
 
   const mainRouteEntries: MetadataRoute.Sitemap = routes.map((route) => ({
@@ -50,5 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...mainRouteEntries, ...neighbourhoodEntries]
+  const toolEntries: MetadataRoute.Sitemap = toolRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
+  return [...mainRouteEntries, ...neighbourhoodEntries, ...toolEntries]
 }

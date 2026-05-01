@@ -7,6 +7,7 @@ import PropertyCard from '@/components/PropertyCard'
 import ListingsIntentBridge from '@/components/ListingsIntentBridge'
 import FAQAccordion from '@/components/FAQAccordion'
 import FAQSection from '@/components/FAQSection'
+import ToolsTeaser from '@/components/ToolsTeaser'
 import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
@@ -318,6 +319,9 @@ export default function Home() {
 
       {/* Section 9 — FAQ (AEO) */}
       <FAQSection />
+
+      {/* Section 9b — Tools Teaser */}
+      <ToolsTeaser />
 
       {/* Section 10 — Neighbourhood Grid (SEO) */}
       <NeighbourhoodGrid />

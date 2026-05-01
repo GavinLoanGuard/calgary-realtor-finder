@@ -66,9 +66,6 @@ export default function RealtorProfile() {
               <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-accent/10 text-accent border-accent/20">
                 ◆ {nathan.brokerage.toUpperCase()}
               </span>
-              <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-primary/10 text-primary border-primary/20">
-                ● RECA #{nathan.licenseNumber}
-              </span>
               <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-accent/10 text-accent border-accent/20">
                 ◆ {nathan.yearsExperience}+ YEARS EXPERIENCE
               </span>

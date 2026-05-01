@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
@@ -21,7 +22,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="h-7 w-7 bg-accent rounded-sm" />
+          <Image src="/favicon.png" alt="Calgary Realtor Finder" width={32} height={32} className="rounded-sm" />
           <div className="flex flex-col leading-tight">
             <span className="font-playfair font-semibold text-white text-lg leading-none">
               Calgary Realtor Finder

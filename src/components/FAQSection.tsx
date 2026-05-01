@@ -2,7 +2,7 @@ const faqs = [
   {
     question: 'How do I find a good REALTOR® in Calgary?',
     answer:
-      'The best way to find a Calgary REALTOR® is to match based on the neighbourhood you’re buying or selling in, your price range, and your timeline. Calgary Realtor Finder connects you with licensed REALTORS® who specialize in your area — free and with no obligation.',
+      "The best way to find a Calgary REALTOR® is to match based on the neighbourhood you’re buying or selling in, your price range, and your timeline. Calgary Realtor Finder connects you with licensed REALTORS® who specialize in your area — free and with no obligation.",
   },
   {
     question: 'What is the difference between a REALTOR® and a real estate agent in Calgary?',
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'How much does a REALTOR® cost in Calgary?',
     answer:
-      'In Calgary, REALTOR® commissions are typically paid by the seller, not the buyer. Commission is negotiable but generally ranges from 3–4% on the first $100,000 and 1.5–2% on the remainder. Buyers typically pay nothing out of pocket to use a buyer’s agent.',
+      "In Calgary, REALTOR® commissions are typically paid by the seller, not the buyer. Commission is negotiable but generally ranges from 3–4% on the first $100,000 and 1.5–2% on the remainder. Buyers typically pay nothing out of pocket to use a buyer’s agent.",
   },
   {
     question: 'Do I need a REALTOR® to buy a house in Calgary?',

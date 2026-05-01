@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { nathan } from '@/data/nathan'
 
 const quickLinks = [
@@ -28,7 +29,7 @@ export default function Footer() {
           {/* Column 1 — Brand */}
           <div>
             <Link href="/" className="flex items-center gap-3">
-              <div className="h-8 w-8 bg-accent rounded-sm shrink-0" />
+              <Image src="/favicon.png" alt="Calgary Realtor Finder" width={48} height={48} className="rounded-sm shrink-0" />
               <div className="flex flex-col leading-tight">
                 <span className="font-playfair font-semibold text-white text-xl leading-none">
                   Calgary Realtor Finder

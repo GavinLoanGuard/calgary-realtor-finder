@@ -10,6 +10,11 @@ function formatCurrency(n: number): string {
   return '$' + Math.round(n).toLocaleString('en-CA')
 }
 
+const commissionOptions: { value: 'standard' | 'flat'; label: string }[] = [
+  { value: 'standard', label: 'Standard Alberta (7% on first $100K, 3% on balance)' },
+  { value: 'flat', label: 'Flat rate example (1.5% total)' },
+]
+
 export default function CommissionCalculator() {
   const [salePrice, setSalePrice] = useState(600000)
   const [commissionType, setCommissionType] = useState<'standard' | 'flat'>('standard')
@@ -69,10 +74,7 @@ export default function CommissionCalculator() {
                 Commission structure
               </label>
               <div className="space-y-2">
-                {[
-                  { value: 'standard', label: 'Standard Alberta (7% on first $100K, 3% on balance)' },
-                  { value: 'flat', label: 'Flat rate example (1.5% total)' },
-                ] as const).map((opt) => (
+                {commissionOptions.map((opt) => (
                   <label key={opt.value} className="flex items-start gap-3 cursor-pointer">
                     <input
                       type="radio"

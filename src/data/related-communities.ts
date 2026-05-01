@@ -56,4 +56,14 @@ export const relatedCommunities: Record<string, RelatedCommunity[]> = {
     { name: 'West Springs', slug: 'west-springs', zone: 'Calgary SW', blurb: 'Popular SW community with newer builds and walkable amenities.' },
     { name: 'Cougar Ridge', slug: 'cougar-ridge', zone: 'Calgary SW', blurb: 'Hilltop SW community with mountain views and family-friendly streets.' },
   ],
+  'mahogany': [
+    { name: 'Auburn Bay', slug: 'auburn-bay', zone: 'Calgary SE', blurb: 'Neighbouring SE lake community with beach club and year-round amenities.' },
+    { name: 'Cranston', slug: 'cranston', zone: 'Calgary SE', blurb: 'Established SE community with Riverstone estate section and Fish Creek access.' },
+    { name: 'McKenzie Towne', slug: 'mckenzie-towne', zone: 'Calgary SE', blurb: 'Charming SE community with walkable main street and strong resale values.' },
+  ],
+  'evergreen': [
+    { name: 'Shawnee Slopes', slug: 'shawnee-slopes', zone: 'Calgary SW', blurb: 'Adjacent Fish Creek community with estate lots and mature landscaping.' },
+    { name: 'Canyon Meadows', slug: 'canyon-meadows', zone: 'Calgary SW', blurb: 'Established SW community with Fish Creek access and mature lots.' },
+    { name: 'Discovery Ridge', slug: 'discovery-ridge', zone: 'Calgary SW', blurb: 'Secluded SW ravine community backing Griffith Woods Provincial Park.' },
+  ],
 }

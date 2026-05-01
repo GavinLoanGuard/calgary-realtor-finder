@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function AgentProfile() {
   return (
     <section className="bg-white py-20 px-8 border-t border-charcoal/10">
@@ -8,15 +10,17 @@ export default function AgentProfile() {
         </h2>
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-          {/* Photo placeholder */}
+          {/* Photo */}
           <div className="flex flex-col items-center">
-            <div
-              className="w-48 h-48 rounded-full bg-charcoal/10 flex items-center justify-center border-2 border-dashed border-charcoal/20"
-              aria-label="Agent photo placeholder"
-            >
-              <span className="font-inter text-charcoal/30 text-xs text-center px-4 leading-relaxed">
-                AGENT PHOTO — replace with /images/nathan.jpg before launch
-              </span>
+            <div className="relative w-48 h-48 rounded-full overflow-hidden">
+              <Image
+                src="/NathanKoenigsberg_headshot.webp"
+                alt="Nathan Koenigsberg — Licensed Calgary REALTOR® with RE/MAX First"
+                fill
+                className="object-cover object-top"
+                sizes="192px"
+                priority
+              />
             </div>
           </div>
 

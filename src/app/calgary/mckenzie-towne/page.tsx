@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadForm from '@/components/LeadForm'
+import RelatedCommunities from '@/components/RelatedCommunities'
 
 export const metadata: Metadata = {
   title: 'McKenzie Towne Houses for Sale | Calgary REALTOR® | Calgary Realtor Finder',
@@ -57,6 +58,13 @@ export default function McKenzieTownePage() {
             <h1 className="font-playfair font-bold text-4xl lg:text-5xl text-white mt-4 leading-tight">
               Find a REALTOR® in McKenzie Towne, Calgary
             </h1>
+            <nav aria-label="breadcrumb" className="mt-3">
+              <span className="font-inter text-white/50 text-sm">
+                <Link href="/#neighbourhood-grid" className="hover:text-white/80 transition-colors">Calgary SE</Link>
+                {' › '}
+                <span className="text-white/70">McKenzie Towne</span>
+              </span>
+            </nav>
             <p className="font-inter text-white/70 text-lg mt-4 max-w-xl leading-relaxed">
               Connect with a licensed REALTOR® who knows McKenzie Towne inside out. Free matching, no obligation.
             </p>
@@ -137,6 +145,8 @@ export default function McKenzieTownePage() {
             </div>
           </div>
         </section>
+
+        <RelatedCommunities slug="mckenzie-towne" />
 
         <Footer />
       </main>

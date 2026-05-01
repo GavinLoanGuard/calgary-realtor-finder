@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadForm from '@/components/LeadForm'
+import RelatedCommunities from '@/components/RelatedCommunities'
 
 export const metadata: Metadata = {
   title: 'Canyon Meadows Homes for Sale Calgary | REALTOR® Match | Calgary Realtor Finder',
@@ -57,6 +58,13 @@ export default function CanyonMeadowsPage() {
             <h1 className="font-playfair font-bold text-4xl lg:text-5xl text-white mt-4 leading-tight">
               Find a REALTOR® in Canyon Meadows, Calgary
             </h1>
+            <nav aria-label="breadcrumb" className="mt-3">
+              <span className="font-inter text-white/50 text-sm">
+                <Link href="/#neighbourhood-grid" className="hover:text-white/80 transition-colors">Calgary SW</Link>
+                {' › '}
+                <span className="text-white/70">Canyon Meadows</span>
+              </span>
+            </nav>
             <p className="font-inter text-white/70 text-lg mt-4 max-w-xl leading-relaxed">
               Get matched with a licensed REALTOR® who knows this established SW Calgary community. Free, no obligation.
             </p>
@@ -137,6 +145,8 @@ export default function CanyonMeadowsPage() {
             </div>
           </div>
         </section>
+
+        <RelatedCommunities slug="canyon-meadows" />
 
         <Footer />
       </main>

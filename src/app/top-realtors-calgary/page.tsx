@@ -204,8 +204,7 @@ export default function TopRealtorsCalgaryPage() {
             </p>
             <p className="font-playfair text-2xl font-bold text-primary mt-2">{nathan.name}</p>
             <p className="text-charcoal/60 text-sm mt-1">
-              {nathan.brokerage} · RECA #{nathan.licenseNumber} · {nathan.yearsExperience} years
-              serving Calgary
+              {nathan.brokerage} · {nathan.yearsExperience}+ years serving Calgary
             </p>
             <p className="text-charcoal/70 text-sm mt-4 leading-relaxed max-w-lg">{nathan.bio}</p>
             <div className="flex flex-wrap gap-2 mt-4">

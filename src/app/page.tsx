@@ -208,6 +208,8 @@ export default function Home() {
                 slug={n.slug}
                 quadrant={n.quadrant}
                 distanceLabel={distanceLabels[n.slug]}
+                imageSrc={n.imageSrc}
+                imageAlt={n.imageAlt}
               />
             ))}
           </div>

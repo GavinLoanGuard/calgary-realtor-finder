@@ -7,7 +7,7 @@ export const nathan = {
   phone: '[NATHAN_PHONE]', // TODO: Replace with real number
   email: 'nathan@nathankoenigsberg.ca',
   website: 'https://nathankoenigsberg.ca',
-  photo: '/nathan-koenigsberg.jpg',
+  photo: '/nathan-koenigsberg.webp',
   photoAlt: 'Nathan Koenigsberg — Licensed Calgary REALTOR® with RE/MAX First',
   yearsExperience: 13,
   areasServed: [

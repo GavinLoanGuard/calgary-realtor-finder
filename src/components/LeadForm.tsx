@@ -25,10 +25,12 @@ export default function LeadForm({ variant }: LeadFormProps) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setSubmitting(true)
-    await fetch('/api/contact', {
+    await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
+        access_key: '0289f3a5-95d1-4863-9ccf-ef3924d6c7c5',
+        subject: `New Realtor Match — ${firstName} ${lastName} · ${neighbourhood} · ${intent}`,
         intent,
         firstName,
         lastName,

@@ -2,7 +2,7 @@ const faqs = [
   {
     question: 'How do I find a good REALTOR® in Calgary?',
     answer:
-      'The best way to find a Calgary REALTOR® is to match based on the neighbourhood you’re buying or selling in, your price range, and your timeline. Calgary Realtor Finder connects you with licensed REALTORS® who specialize in your area — free and with no obligation.',
+      'The best way to find a Calgary REALTOR® is to match based on the neighbourhood you're buying or selling in, your price range, and your timeline. Calgary Realtor Finder connects you with licensed REALTORS® who specialize in your area — free and with no obligation.',
   },
   {
     question: 'What is the difference between a REALTOR® and a real estate agent in Calgary?',
@@ -12,7 +12,7 @@ const faqs = [
   {
     question: 'How much does a REALTOR® cost in Calgary?',
     answer:
-      'In Calgary, REALTOR® commissions are typically paid by the seller, not the buyer. Commission is negotiable but generally ranges from 3–4% on the first $100,000 and 1.5–2% on the remainder. Buyers typically pay nothing out of pocket to use a buyer’s agent.',
+      'In Calgary, REALTOR® commissions are typically paid by the seller, not the buyer. Commission is negotiable but generally ranges from 3–4% on the first $100,000 and 1.5–2% on the remainder. Buyers typically pay nothing out of pocket to use a buyer's agent.',
   },
   {
     question: 'Do I need a REALTOR® to buy a house in Calgary?',
@@ -20,9 +20,14 @@ const faqs = [
       'You are not legally required to use a REALTOR® in Alberta, but most buyers work with one because the service is free to buyers and a licensed agent provides market expertise, negotiation support, and legal protection throughout the transaction.',
   },
   {
-    question: 'What areas does Calgary Realtor Finder serve?',
+    question: 'Which Calgary neighbourhoods does Calgary Realtor Finder serve?',
     answer:
-      'We match buyers and sellers across all Calgary quadrants — NW, NE, SW, and SE — as well as surrounding communities including Airdrie, Cochrane, Okotoks, and Chestermere.',
+      'We currently match buyers and sellers across City Centre, West Calgary, South Calgary, South East Calgary, and Okotoks. We are actively expanding to North Calgary, North East Calgary, Airdrie, Cochrane, and Chestermere — join the waitlist and we'll notify you when coverage is live in your area.',
+  },
+  {
+    question: 'How quickly will a REALTOR® contact me after I submit my information?',
+    answer:
+      'For all active coverage areas, you can expect a call or text from your matched REALTOR® within 2 hours of submitting your information during business hours.',
   },
 ]
 

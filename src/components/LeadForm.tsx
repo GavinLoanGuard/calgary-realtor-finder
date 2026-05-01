@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { CheckCircle } from 'lucide-react'
+import { CheckCircle, Clock } from 'lucide-react'
+import { areas, type Area } from '@/data/areas'
 
 interface LeadFormProps {
   variant: 'hero' | 'sidebar'
@@ -16,11 +17,13 @@ export default function LeadForm({ variant }: LeadFormProps) {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
-  const [neighbourhood, setNeighbourhood] = useState('')
+  const [selectedAreaSlug, setSelectedAreaSlug] = useState('')
   const [timeline, setTimeline] = useState('')
   const [priceRange, setPriceRange] = useState('')
   const [submitting, setSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
+  const [submittedArea, setSubmittedArea] = useState<Area | null>(null)
+
+  const selectedArea = areas.find(a => a.slug === selectedAreaSlug) ?? null
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -34,7 +37,8 @@ export default function LeadForm({ variant }: LeadFormProps) {
         lastName,
         email,
         phone,
-        neighbourhood,
+        neighbourhood: selectedArea?.name ?? selectedAreaSlug,
+        areaStatus: selectedArea?.status ?? 'active',
         timeline,
         priceRange,
       }),
@@ -44,21 +48,36 @@ export default function LeadForm({ variant }: LeadFormProps) {
       ;(window as any).dataLayer.push({
         event: 'realtor_match_request',
         transaction_type: intent,
-        neighbourhood,
+        neighbourhood: selectedArea?.name ?? selectedAreaSlug,
+        area_status: selectedArea?.status ?? 'active',
         timeline,
         price_range: priceRange,
       })
     }
-    setSubmitted(true)
+    setSubmittedArea(selectedArea)
   }
 
-  if (submitted) {
+  if (submittedArea !== null) {
+    if (submittedArea.status === 'waitlist') {
+      return (
+        <div className="flex flex-col items-center gap-4 py-10 text-center">
+          <Clock className="text-accent" size={48} />
+          <h2 className="font-playfair font-semibold text-xl text-primary">We'll keep you posted.</h2>
+          <p className="font-inter text-sm text-charcoal/70 max-w-sm">
+            Thanks! We&apos;re building out coverage for {submittedArea.name} now. We&apos;ll notify you as
+            soon as a REALTOR® in your area is confirmed — usually within a few days.
+          </p>
+        </div>
+      )
+    }
+
     return (
       <div className="flex flex-col items-center gap-4 py-10 text-center">
         <CheckCircle className="text-green-500" size={48} />
-        <h2 className="font-playfair font-semibold text-xl text-primary">You're matched!</h2>
-        <p className="font-inter text-sm text-charcoal/70">
-          Nathan will be in touch within a few hours. Check your email for confirmation.
+        <h2 className="font-playfair font-semibold text-xl text-primary">You&apos;re matched.</h2>
+        <p className="font-inter text-sm text-charcoal/70 max-w-sm">
+          Nathan Koenigsberg from RE/MAX First covers {submittedArea.name} and will be in touch
+          within 2 hours. Keep your phone nearby.
         </p>
       </div>
     )
@@ -123,26 +142,23 @@ export default function LeadForm({ variant }: LeadFormProps) {
         onChange={(e) => setPhone(e.target.value)}
       />
 
-      {/* Neighbourhood */}
+      {/* Area selector */}
       <select
         className={fieldClass}
-        value={neighbourhood}
-        onChange={(e) => setNeighbourhood(e.target.value)}
+        value={selectedAreaSlug}
+        onChange={(e) => setSelectedAreaSlug(e.target.value)}
       >
-        <option value="">Choose an area...</option>
-        <option>Calgary NE</option>
-        <option>Calgary NW</option>
-        <option>Calgary SW</option>
-        <option>Calgary SE</option>
-        <option>City Centre</option>
-        <option>Airdrie</option>
-        <option>Cochrane</option>
-        <option>Okotoks</option>
-        <option>Edmonton</option>
-        <option>Red Deer</option>
-        <option>Lethbridge</option>
-        <option>Grande Prairie</option>
-        <option>Other Alberta</option>
+        <option value="">Which area of Calgary?</option>
+        <optgroup label="Active coverage">
+          {areas.filter(a => a.status === 'active').map(a => (
+            <option key={a.slug} value={a.slug}>{a.name}</option>
+          ))}
+        </optgroup>
+        <optgroup label="Coming soon">
+          {areas.filter(a => a.status === 'waitlist').map(a => (
+            <option key={a.slug} value={a.slug}>{a.name}</option>
+          ))}
+        </optgroup>
       </select>
 
       {/* Timeline */}
@@ -193,7 +209,7 @@ export default function LeadForm({ variant }: LeadFormProps) {
   }
 
   return (
-    <div className="bg-white rounded-sm shadow-lg p-6">
+    <div id="lead-form" className="bg-white rounded-sm shadow-lg p-6">
       <h2 className="font-playfair font-semibold text-xl text-primary">
         Get matched in under 60 seconds
       </h2>

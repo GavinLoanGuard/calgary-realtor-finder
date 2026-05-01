@@ -9,6 +9,7 @@ interface NeighbourhoodTileProps {
   distanceLabel?: string
   imageSrc?: string
   imageAlt?: string
+  bgUrl?: string
 }
 
 export default function NeighbourhoodTile({
@@ -18,6 +19,7 @@ export default function NeighbourhoodTile({
   distanceLabel,
   imageSrc,
   imageAlt,
+  bgUrl,
 }: NeighbourhoodTileProps) {
   const href = slug === 'city-centre' ? '/calgary-city-centre-realtors' : `/${slug}-realtors`
   const topLabel = quadrant ? `QUADRANT · ${quadrant}` : distanceLabel
@@ -26,8 +28,10 @@ export default function NeighbourhoodTile({
     <Link
       href={href}
       className="block aspect-square relative overflow-hidden rounded-sm cursor-pointer group bg-primary"
+      style={bgUrl ? { backgroundImage: `url(${bgUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
     >
-      {imageSrc ? (
+      {/* Local image fallback when no bgUrl */}
+      {!bgUrl && imageSrc ? (
         <Image
           src={imageSrc}
           alt={imageAlt || `${name} Calgary`}
@@ -37,8 +41,13 @@ export default function NeighbourhoodTile({
         />
       ) : null}
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+      {/* Dark overlay */}
+      <div
+        className="absolute inset-0 transition-opacity group-hover:opacity-80"
+        style={{ background: bgUrl ? 'rgba(0,0,0,0.35)' : undefined }}
+      />
+      {/* Gradient overlay for local images */}
+      {!bgUrl && <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />}
 
       {/* Top-left label */}
       {topLabel && (

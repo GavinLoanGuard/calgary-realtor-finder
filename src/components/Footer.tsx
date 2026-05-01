@@ -22,7 +22,7 @@ const neighbourhoodLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary">
+    <footer className="bg-primary" data-hide-sticky="true">
       <div className="mx-auto max-w-7xl px-8 py-16">
         {/* Four column grid */}
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">

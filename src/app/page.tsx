@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Shield, CheckCircle, Clock, Star } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
@@ -9,6 +10,8 @@ import FAQAccordion from '@/components/FAQAccordion'
 import FAQSection from '@/components/FAQSection'
 import ToolsTeaser from '@/components/ToolsTeaser'
 import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
+import FeaturedAgentTeaser from '@/components/FeaturedAgentTeaser'
+import StickyBottomCTA from '@/components/StickyBottomCTA'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
@@ -109,23 +112,23 @@ export default function Home() {
       <HeroSection />
 
       {/* Section 2 — Trust Bar */}
-      <div className="w-full bg-primary/95 py-4 px-8">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-accent">◆</span>
-            <span className="font-inter text-white/80 text-sm">22,000+ monthly Calgary realtor searches</span>
+      <div className="w-full bg-primary/95 py-5 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex items-center gap-3">
+            <Shield size={16} className="text-accent shrink-0" />
+            <span className="font-inter text-white/80 text-sm">100% Free Service — Never any fees</span>
           </div>
-          <div className="hidden md:flex items-center gap-2">
-            <span className="text-accent">◆</span>
-            <span className="font-inter text-white/80 text-sm">Licensed REALTORS® only</span>
+          <div className="flex items-center gap-3">
+            <CheckCircle size={16} className="text-accent shrink-0" />
+            <span className="font-inter text-white/80 text-sm">We Do the Vetting — You get the best</span>
           </div>
-          <div className="hidden md:flex items-center gap-2">
-            <span className="text-accent">◆</span>
-            <span className="font-inter text-white/80 text-sm">Calgary's local realtor resource</span>
+          <div className="flex items-center gap-3">
+            <Clock size={16} className="text-accent shrink-0" />
+            <span className="font-inter text-white/80 text-sm">Save Time — Matched in minutes</span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-accent">◆</span>
-            <span className="font-inter text-white/80 text-sm">Free — no obligation</span>
+          <div className="flex items-center gap-3">
+            <Star size={16} className="text-accent shrink-0" />
+            <span className="font-inter text-white/80 text-sm">Better Results — Neighbourhood expertise</span>
           </div>
         </div>
       </div>
@@ -221,6 +224,7 @@ export default function Home() {
                 distanceLabel={distanceLabels[n.slug]}
                 imageSrc={n.imageSrc}
                 imageAlt={n.imageAlt}
+                bgUrl={n.bgUrl}
               />
             ))}
           </div>
@@ -323,11 +327,18 @@ export default function Home() {
       {/* Section 9b — Tools Teaser */}
       <ToolsTeaser />
 
+      {/* Section 9c — Featured Agent Teaser */}
+      <FeaturedAgentTeaser />
+
       {/* Section 10 — Neighbourhood Grid (SEO) */}
-      <NeighbourhoodGrid />
+      <div id="neighbourhood-grid">
+        <NeighbourhoodGrid />
+      </div>
 
         <Footer />
       </main>
+
+      <StickyBottomCTA />
     </>
   )
 }

@@ -103,7 +103,7 @@ export default function AboutPage() {
               <div>
                 <p className="font-playfair text-xl font-bold text-primary">{nathan.name}</p>
                 <p className="text-accent text-sm font-medium mt-1">{nathan.brokerage}</p>
-                <p className="text-charcoal/60 text-sm mt-1">RECA License #{nathan.licenseNumber}</p>
+                <p className="text-charcoal/60 text-sm mt-1">RE/MAX First · {nathan.yearsExperience}+ Years Experience</p>
                 <p className="text-charcoal/60 text-sm mt-3 leading-relaxed max-w-lg">{nathan.bio}</p>
               </div>
             </div>

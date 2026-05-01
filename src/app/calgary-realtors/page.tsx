@@ -227,8 +227,7 @@ export default function CalgaryRealtorsPage() {
             </p>
             <p className="font-playfair text-2xl font-bold text-primary mt-2">{nathan.name}</p>
             <p className="text-charcoal/60 text-sm mt-1">
-              {nathan.brokerage} · RECA #{nathan.licenseNumber} · {nathan.yearsExperience} years
-              experience
+              {nathan.brokerage} · {nathan.yearsExperience}+ years experience
             </p>
             <p className="text-charcoal/70 text-sm mt-4 leading-relaxed max-w-lg">
               Serving Calgary buyers and sellers across all four quadrants and surrounding

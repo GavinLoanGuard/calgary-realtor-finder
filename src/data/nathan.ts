@@ -11,15 +11,14 @@ export const nathan = {
   photoAlt: 'Nathan Koenigsberg — Licensed Calgary REALTOR® with RE/MAX First',
   yearsExperience: 13,
   areasServed: [
+    'City Centre',
     'Calgary SE',
     'Calgary SW',
-    'Calgary NW',
-    'Calgary NE',
-    'City Centre',
-    'Airdrie',
+    'Calgary West',
+    'Calgary South',
     'Okotoks',
   ],
-  bio: "Born and raised in Calgary, Nathan Koenigsberg has spent thirteen years helping buyers and sellers navigate one of Canada's most dynamic real estate markets. A licensed REALTOR® with RE/MAX First, Nathan specializes in Calgary's SE, SW, NW, and NE quadrants as well as surrounding communities including Airdrie and Okotoks. His client-first approach and deep neighbourhood knowledge have made him a trusted resource for first-time buyers, move-up families, and investors alike.",
+  bio: "Born and raised in Calgary, Nathan Koenigsberg has spent thirteen years helping buyers and sellers navigate one of Canada's most dynamic real estate markets. A licensed REALTOR® with RE/MAX First, Nathan specializes in Calgary's inner city, Southeast, Southwest, West, and South communities, as well as Okotoks. His client-first approach and deep neighbourhood knowledge have made him a trusted resource for first-time buyers, move-up families, and investors alike.",
   reviews: [
     {
       quote: 'Nathan walked us through every step of our first home purchase in Mahogany. Patient, honest, and never once felt pushy.',

@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/alberta-cities',
     '/resources',
+    '/calgary-city-centre-realtors',
+    '/privacy',
+    '/terms',
+    '/accessibility',
   ]
 
   const neighbourhoodRoutes = [
@@ -36,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calgary/arbour-lake',
     '/calgary/mahogany',
     '/calgary/evergreen',
+    '/calgary/copperfield',
   ]
 
   const toolRoutes = [

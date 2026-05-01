@@ -61,6 +61,11 @@ export const relatedCommunities: Record<string, RelatedCommunity[]> = {
     { name: 'Cranston', slug: 'cranston', zone: 'Calgary SE', blurb: 'Established SE community with Riverstone estate section and Fish Creek access.' },
     { name: 'McKenzie Towne', slug: 'mckenzie-towne', zone: 'Calgary SE', blurb: 'Charming SE community with walkable main street and strong resale values.' },
   ],
+  'copperfield': [
+    { name: 'McKenzie Towne', slug: 'mckenzie-towne', zone: 'Calgary SE', blurb: 'Charming SE community with walkable main street and strong resale values.' },
+    { name: 'Auburn Bay', slug: 'auburn-bay', zone: 'Calgary SE', blurb: 'Popular SE lake community with year-round beach club amenities.' },
+    { name: 'Mahogany', slug: 'mahogany', zone: 'Calgary SE', blurb: "Calgary's largest private lake community — award-winning SE neighbourhood." },
+  ],
   'evergreen': [
     { name: 'Shawnee Slopes', slug: 'shawnee-slopes', zone: 'Calgary SW', blurb: 'Adjacent Fish Creek community with estate lots and mature landscaping.' },
     { name: 'Canyon Meadows', slug: 'canyon-meadows', zone: 'Calgary SW', blurb: 'Established SW community with Fish Creek access and mature lots.' },

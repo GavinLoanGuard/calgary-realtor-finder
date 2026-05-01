@@ -53,7 +53,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right column — form card */}
-          <div>
+          <div id="lead-form">
             <LeadForm variant="hero" />
           </div>
         </div>

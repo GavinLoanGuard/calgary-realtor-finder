@@ -89,7 +89,7 @@ export default function Footer() {
             <h3 className="font-inter font-semibold text-white text-sm tracking-widest uppercase mb-4">
               Get In Touch
             </h3>
-            <p className="font-inter font-semibold text-white text-lg">(403) 555-0188</p>
+            <p className="font-inter font-semibold text-white text-lg">(403) 536-9024</p>
             <p className="font-inter text-accent text-sm mt-1">hello@calgaryrealtorfinder.ca</p>
             <p className="font-inter text-white/60 text-sm mt-1">Mon–Sat · 8am–8pm MT</p>
             <div className="mt-6 border-t border-white/10 pt-6">

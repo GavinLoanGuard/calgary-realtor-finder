@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { nathan } from '@/data/nathan'
 import PropertyCard from './PropertyCard'
 
@@ -125,12 +126,18 @@ export default function RealtorProfile() {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 mt-8">
-              <button className="font-inter bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-sm transition-colors">
+              <a
+                href="/#lead-form"
+                className="font-inter bg-accent hover:bg-accent-light text-white font-semibold px-6 py-3 rounded-sm transition-colors"
+              >
                 Connect with {nathan.name.split(' ')[0]} →
-              </button>
-              <button className="font-inter border border-primary text-primary px-6 py-3 font-medium rounded-sm hover:bg-primary hover:text-white transition-colors">
+              </a>
+              <Link
+                href="/contact"
+                className="font-inter border border-primary text-primary px-6 py-3 font-medium rounded-sm hover:bg-primary hover:text-white transition-colors"
+              >
                 View full profile
-              </button>
+              </Link>
             </div>
           </div>
         </div>

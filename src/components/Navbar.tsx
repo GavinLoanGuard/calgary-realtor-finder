@@ -8,8 +8,6 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { label: 'Find a Realtor', href: '/' },
   { label: 'Calgary', href: '/calgary-realtors' },
-  { label: 'Edmonton', href: '/edmonton-realtors' },
-  { label: 'Alberta Cities', href: '/alberta-cities' },
   { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -48,7 +46,7 @@ export default function Navbar() {
 
         {/* Desktop right */}
         <div className="hidden lg:flex items-center gap-5">
-          <span className="font-inter text-sm text-white/70">(403) 555-0188</span>
+          <span className="font-inter text-sm text-white/70">(403) 536-9024</span>
           <Link
             href="/contact"
             className="bg-accent text-white font-inter font-semibold text-sm px-5 py-2 rounded-sm hover:bg-accent-light transition-colors"

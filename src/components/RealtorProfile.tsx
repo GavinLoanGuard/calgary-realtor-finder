@@ -61,6 +61,14 @@ export default function RealtorProfile() {
           <div>
             <h3 className="font-playfair text-4xl font-bold text-primary">{nathan.name}</h3>
 
+            {/* Credentials bar */}
+            <div className="mt-4 space-y-1.5">
+              <p className="font-inter text-charcoal/70 text-sm">✓ RE/MAX First — Calgary's top-producing RE/MAX office</p>
+              <p className="font-inter text-charcoal/70 text-sm">✓ CREB Member — Calgary Real Estate Board licensed</p>
+              <p className="font-inter text-charcoal/70 text-sm">✓ Serving Calgary buyers &amp; sellers across City Centre, SW, SE &amp; Okotoks</p>
+              <p className="font-inter text-charcoal/70 text-sm">✓ Recent sales: McKenzie Towne $599,900 · Canyon Meadows $1,089,000 · Shawnee Slopes $1,340,000</p>
+            </div>
+
             {/* Badge pills */}
             <div className="flex flex-wrap gap-2 mt-3">
               <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-accent/10 text-accent border-accent/20">

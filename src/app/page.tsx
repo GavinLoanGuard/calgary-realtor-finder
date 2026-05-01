@@ -3,14 +3,13 @@ import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
 import NeighbourhoodTile from '@/components/NeighbourhoodTile'
-import CityCard from '@/components/CityCard'
 import PropertyCard from '@/components/PropertyCard'
+import ListingsIntentBridge from '@/components/ListingsIntentBridge'
 import FAQAccordion from '@/components/FAQAccordion'
 import FAQSection from '@/components/FAQSection'
 import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
 import Footer from '@/components/Footer'
 import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
-import { albertaCities } from '@/data/cities'
 import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
 
 export const metadata: Metadata = {
@@ -113,7 +112,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-2">
             <span className="text-accent">◆</span>
-            <span className="font-inter text-white/80 text-sm">22,000+ monthly searches served</span>
+            <span className="font-inter text-white/80 text-sm">22,000+ monthly Calgary realtor searches</span>
           </div>
           <div className="hidden md:flex items-center gap-2">
             <span className="text-accent">◆</span>
@@ -200,6 +199,17 @@ export default function Home() {
             Calgary's quadrants each have their own market dynamics. Pick where you're looking —
             we'll match you with an agent who works it daily.
           </p>
+          <p className="font-inter text-charcoal/60 text-sm mt-4">
+            Explore communities:{' '}
+            <a href="/calgary/auburn-bay" className="text-accent hover:underline">Auburn Bay</a>{' · '}
+            <a href="/calgary/mckenzie-towne" className="text-accent hover:underline">McKenzie Towne</a>{' · '}
+            <a href="/calgary/cranston" className="text-accent hover:underline">Cranston</a>{' · '}
+            <a href="/calgary/canyon-meadows" className="text-accent hover:underline">Canyon Meadows</a>{' · '}
+            <a href="/calgary/west-springs" className="text-accent hover:underline">West Springs</a>{' · '}
+            <a href="/calgary/cougar-ridge" className="text-accent hover:underline">Cougar Ridge</a>{' · '}
+            <a href="/calgary/discovery-ridge" className="text-accent hover:underline">Discovery Ridge</a>{' · '}
+            <a href="/calgary/hamptons" className="text-accent hover:underline">Hamptons</a>
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             {calgaryNeighbourhoods.map((n) => (
               <NeighbourhoodTile
@@ -210,37 +220,6 @@ export default function Home() {
                 distanceLabel={distanceLabels[n.slug]}
                 imageSrc={n.imageSrc}
                 imageAlt={n.imageAlt}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6 — Alberta Cities Strip */}
-      <section className="bg-primary py-20 px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
-            <div>
-              <p className="font-inter text-accent text-xs tracking-widest uppercase">ACROSS ALBERTA</p>
-              <h2 className="font-playfair text-4xl text-white font-bold mt-2">Beyond Calgary.</h2>
-              <p className="font-inter text-white/60 text-lg mt-3 max-w-lg leading-relaxed">
-                We connect home buyers and sellers with licensed REALTORS® across every major
-                market in Alberta.
-              </p>
-            </div>
-            <p className="font-inter text-white/60 text-sm lg:text-right max-w-xs shrink-0 lg:pt-16">
-              Click any city to start your match — same vetted process, same no-fee promise.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            {albertaCities.map((city) => (
-              <CityCard
-                key={city.slug}
-                name={city.name}
-                slug={city.slug}
-                region={city.region}
-                agentCount={city.agentCount}
-                dark
               />
             ))}
           </div>
@@ -302,6 +281,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ListingsIntentBridge — captures houses-for-sale keyword cluster */}
+      <ListingsIntentBridge />
 
       {/* Section 8 — MLS Listings Strip */}
       <section className="bg-background py-20 px-8 border-t border-charcoal/10">

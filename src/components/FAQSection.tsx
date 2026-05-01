@@ -22,7 +22,7 @@ const faqs = [
   {
     question: 'What areas does Calgary Realtor Finder serve?',
     answer:
-      'We match buyers and sellers across all Calgary quadrants — NW, NE, SW, and SE — as well as surrounding communities including Airdrie, Cochrane, Okotoks, and Chestermere.',
+      "We match buyers and sellers across Calgary's City Centre, West, South, and South East, plus Okotoks. Coverage for North Calgary, NE Calgary, Airdrie, Cochrane, and Chestermere is coming soon — join the waitlist and we'll notify you when it's live.",
   },
 ]
 

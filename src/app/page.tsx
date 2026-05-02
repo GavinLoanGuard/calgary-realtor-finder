@@ -224,7 +224,6 @@ export default function Home() {
                 distanceLabel={distanceLabels[n.slug]}
                 imageSrc={n.imageSrc}
                 imageAlt={n.imageAlt}
-                bgUrl={n.bgUrl}
               />
             ))}
           </div>

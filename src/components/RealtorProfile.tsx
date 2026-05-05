@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { nathan } from '@/data/nathan'
+import { nathanSchema } from '@/data/schema'
 import PropertyCard from './PropertyCard'
 
 export default function RealtorProfile() {
+  const jsonLd = JSON.stringify(nathanSchema)
+
   return (
     <section className="bg-background py-20 px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-6">
@@ -63,7 +67,7 @@ export default function RealtorProfile() {
             <h3 className="font-playfair text-4xl font-bold text-primary">{nathan.name}</h3>
 
             {/* RE/MAX First brokerage logo */}
-            <div className="remax-branding mt-2" style={{ position: 'relative', width: '150px', height: '50px' }}>
+            <div className="remax-branding mt-2" style={{ position: 'relative', width: '120px', height: '40px' }}>
               <Image
                 src="/images/2025-REMAXFIRST_CMYK_BLUE-01-1.png"
                 alt="RE/MAX First"

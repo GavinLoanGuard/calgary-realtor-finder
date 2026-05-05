@@ -22,11 +22,15 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://calgaryrealtorfinder.ca'),
   title: {
-    default: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First · Calgary, Alberta',
+    default: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
     template: '%s | Calgary Realtor Finder',
   },
   description:
-    'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free matching service. No obligation. Serving Calgary, Edmonton and all of Alberta.',
+    'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
+  icons: {
+    icon: [{ url: '/images/Balloon_Mark_RGB.png', sizes: '32x32', type: 'image/png' }],
+    apple: [{ url: '/images/Balloon_Mark_RGB.png', sizes: '180x180', type: 'image/png' }],
+  },
   keywords: [
     'Calgary realtor',
     'Calgary real estate agent',
@@ -47,9 +51,9 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     url: 'https://calgaryrealtorfinder.ca',
     siteName: 'Calgary Realtor Finder',
-    title: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First',
+    title: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
     description:
-      'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free matching service. No obligation.',
+      'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings. Free, no obligation.',
     images: [
       {
         url: '/og-default.png',
@@ -61,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First',
+    title: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
     description:
-      'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free, no obligation.',
+      'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings. Free, no obligation.',
     images: ['/og-default.png'],
   },
   robots: {

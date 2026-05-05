@@ -1,14 +1,15 @@
 import { Metadata } from 'next'
 import { Shield, CheckCircle, Clock, Star } from 'lucide-react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
 import NeighbourhoodTile from '@/components/NeighbourhoodTile'
-import PropertyCard from '@/components/PropertyCard'
 import ListingsIntentBridge from '@/components/ListingsIntentBridge'
 import FAQAccordion from '@/components/FAQAccordion'
 import FAQSection from '@/components/FAQSection'
 import ToolsTeaser from '@/components/ToolsTeaser'
+import AgentProfile from '@/components/AgentProfile'
 import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
 import FeaturedAgentTeaser from '@/components/FeaturedAgentTeaser'
 import StickyBottomCTA from '@/components/StickyBottomCTA'
@@ -17,46 +18,12 @@ import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
 
 export const metadata: Metadata = {
-  title: 'Find a Calgary REALTOR® | Free Matching Service | Calgary Realtor Finder',
+  title: {
+    absolute: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
+  },
   description:
-    'Looking for a Calgary REALTOR®? Our free matching service connects buyers and sellers with licensed Calgary real estate agents who know your neighbourhood. Takes 60 seconds.',
+    'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
 }
-
-const placeholderProperties = [
-  {
-    badge: 'NEW · 2 DAYS',
-    neighbourhood: 'Mahogany',
-    price: '$729,000',
-    address: '142 Masters Heights SE',
-    suburb: 'Mahogany, Calgary SE · T3M 2N7',
-    beds: 4,
-    baths: 3.5,
-    sqft: 2184,
-    status: 'NEW' as const,
-  },
-  {
-    badge: 'OPEN SAT 1-3',
-    neighbourhood: 'Beltline',
-    price: '$439,000',
-    address: '#1402, 215 13 Ave SW',
-    suburb: 'Beltline, City Centre · T2R 0V1',
-    beds: 2,
-    baths: 2,
-    sqft: 1012,
-    status: 'OPEN' as const,
-  },
-  {
-    badge: 'PRICE DROP',
-    neighbourhood: 'Tuscany',
-    price: '$865,000',
-    address: '88 Tuscany Estates Cres NW',
-    suburb: 'Tuscany, Calgary NW · T3L 0B5',
-    beds: 5,
-    baths: 4,
-    sqft: 2940,
-    status: 'PRICE DROP' as const,
-  },
-]
 
 const distanceLabels: Record<string, string> = {
   'city-centre': 'CORE',
@@ -289,38 +256,52 @@ export default function Home() {
       {/* ListingsIntentBridge — captures houses-for-sale keyword cluster */}
       <ListingsIntentBridge />
 
-      {/* Section 8 — MLS Listings Strip */}
+      {/* Section 8 — Live MLS Listings (IDX) */}
       <section className="bg-background py-20 px-8 border-t border-charcoal/10">
         <div className="max-w-7xl mx-auto">
           <p className="font-inter text-accent text-xs uppercase tracking-widest">
-            LIVE MLS® LISTINGS
+            LIVE MLS® LISTINGS · PILLAR 9™
           </p>
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mt-2">
             <h2 className="font-playfair text-4xl text-primary">
               Current Calgary MLS® listings.
             </h2>
             <p className="font-inter text-charcoal/50 text-sm md:text-right max-w-xs">
-              A snapshot of active inventory across the city. Connect with a matched REALTOR® to
-              see the full picture.
+              Live inventory across the city. Connect with a matched REALTOR® to
+              book a showing.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {placeholderProperties.map((prop) => (
-              <PropertyCard key={prop.address} {...prop} />
-            ))}
+          <div className="mt-8 w-full overflow-hidden rounded-sm border border-charcoal/10">
+            <iframe
+              src="https://matrix.pillarnine.com/Matrix/public/IDX.aspx?idx=ad2a41b"
+              width="100%"
+              title="Calgary MLS Listings"
+              loading="lazy"
+              style={{
+                display: 'block',
+                height: '600px',
+                border: 'none',
+              }}
+            />
           </div>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mt-6 gap-3">
             <p className="font-inter text-charcoal/30 text-xs uppercase tracking-widest">
               LISTING DATA PROVIDED VIA ALBERTA MLS® SYSTEM · UPDATED DAILY
             </p>
-            <button className="font-inter text-accent text-sm font-medium hover:text-accent-light transition-colors">
-              Browse all current listings →
-            </button>
+            <Link
+              href="/listings"
+              className="font-inter text-accent text-sm font-medium hover:text-accent-light transition-colors"
+            >
+              Browse all listings →
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Section 9 — FAQ (AEO) */}
+      {/* Section 9 — Agent Profile */}
+      <AgentProfile />
+
+      {/* Section 10 — FAQ (AEO) */}
       <FAQSection />
 
       {/* Section 9b — Tools Teaser */}

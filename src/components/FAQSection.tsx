@@ -20,9 +20,14 @@ const faqs = [
       'You are not legally required to use a REALTOR® in Alberta, but most buyers work with one because the service is free to buyers and a licensed agent provides market expertise, negotiation support, and legal protection throughout the transaction.',
   },
   {
-    question: 'What areas does Calgary Realtor Finder serve?',
+    question: 'Which Calgary neighbourhoods does Calgary Realtor Finder serve?',
     answer:
       "We match buyers and sellers across Calgary's City Centre, West, South, and South East, plus Okotoks. Coverage for North Calgary, NE Calgary, Airdrie, Cochrane, and Chestermere is coming soon — join the waitlist and we'll notify you when it's live.",
+  },
+  {
+    question: 'How quickly will a REALTOR® contact me after I submit my information?',
+    answer:
+      'For all active coverage areas, you can expect a call or text from your matched REALTOR® within 2 hours of submitting your information during business hours.',
   },
 ]
 

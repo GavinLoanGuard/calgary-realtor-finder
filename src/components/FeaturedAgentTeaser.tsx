@@ -72,7 +72,7 @@ export default function FeaturedAgentTeaser() {
               {/* Award badge */}
               <div className="mt-4" style={{ position: 'relative', width: '90px', height: '90px' }}>
                 <Image
-                  src="/images/top100-transparent.png"
+                  src="/images/top100-badge.png"
                   alt="RE/MAX Western Canada Top 100 Individuals — Residential"
                   fill
                   style={{ objectFit: 'contain', objectPosition: 'left center' }}

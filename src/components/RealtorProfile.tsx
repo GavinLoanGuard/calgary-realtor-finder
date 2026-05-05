@@ -52,18 +52,6 @@ export default function RealtorProfile() {
                   <span className="font-inter text-charcoal/20 text-xs">Add /public/nathan-koenigsberg.jpg</span>
                 </div>
               )}
-              {/* Award badge overlay */}
-              <div className="absolute bottom-4 left-4 bg-white rounded-sm shadow-md p-2">
-                <div style={{ position: 'relative', width: '100px', height: '100px' }}>
-                  <Image
-                    src="/images/top100-transparent.png"
-                    alt="RE/MAX Western Canada Top 100 Individuals — Residential"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    sizes="100px"
-                  />
-                </div>
-              </div>
             </div>
           </div>
 

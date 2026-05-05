@@ -25,17 +25,30 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full bg-primary">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 shrink-0">
-          <Image src="/favicon.png" alt="Calgary Realtor Finder" width={48} height={48} className="rounded-sm" />
-          <div className="flex flex-col leading-tight">
-            <span className="font-playfair font-semibold text-white text-lg leading-none">
-              Calgary Realtor Finder
-            </span>
-            <span className="font-inter text-accent text-xs tracking-widest mt-0.5">
-              Alberta · Established 2026
-            </span>
+        <div className="flex items-center gap-3 shrink-0">
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/favicon.png" alt="Calgary Realtor Finder" width={48} height={48} className="rounded-sm" />
+            <div className="flex flex-col leading-tight">
+              <span className="font-playfair font-semibold text-white text-lg leading-none">
+                Calgary Realtor Finder
+              </span>
+              <span className="font-inter text-accent text-xs tracking-widest mt-0.5">
+                Alberta · Established 2026
+              </span>
+            </div>
+          </Link>
+          <div className="hidden sm:flex items-center border-l border-white/20 pl-3">
+            <div className="remax-branding" style={{ position: 'relative', width: '120px', height: '40px' }}>
+              <Image
+                src="/images/2025-REMAXFIRST_CREAM-horizontal.png"
+                alt="RE/MAX First"
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                sizes="120px"
+              />
+            </div>
           </div>
-        </Link>
+        </div>
 
         {/* Desktop centre links */}
         <div className="hidden lg:flex items-center gap-6">

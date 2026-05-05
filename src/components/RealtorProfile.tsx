@@ -62,6 +62,17 @@ export default function RealtorProfile() {
           <div>
             <h3 className="font-playfair text-4xl font-bold text-primary">{nathan.name}</h3>
 
+            {/* RE/MAX First brokerage logo */}
+            <div className="remax-branding mt-2" style={{ position: 'relative', width: '150px', height: '50px' }}>
+              <Image
+                src="/images/2025-REMAXFIRST_CMYK_BLUE-01-1.png"
+                alt="RE/MAX First"
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                sizes="150px"
+              />
+            </div>
+
             {/* Credentials bar */}
             <div className="mt-4 space-y-1.5">
               <p className="font-inter text-charcoal/70 text-sm">✓ RE/MAX First — Calgary's top-producing RE/MAX office</p>

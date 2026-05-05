@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import PageLayout from '@/components/PageLayout'
 import Breadcrumb from '@/components/Breadcrumb'
 import LeadForm from '@/components/LeadForm'
@@ -49,6 +50,17 @@ export default function ContactPage() {
           There is no fee and no obligation to proceed.
         </p>
         <div className="mt-8 max-w-lg mx-auto">
+          <div className="remax-branding flex justify-center mb-6">
+            <div style={{ position: 'relative', width: '100px', height: '33px' }}>
+              <Image
+                src="/images/2025-REMAXFIRST_CMYK_BLUE-01-1.png"
+                alt="RE/MAX First"
+                fill
+                style={{ objectFit: 'contain' }}
+                sizes="100px"
+              />
+            </div>
+          </div>
           <LeadForm variant="hero" />
         </div>
       </PageLayout>

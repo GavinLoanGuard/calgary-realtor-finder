@@ -54,11 +54,20 @@ export default function HeroSection() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <p className="font-playfair font-bold text-white text-sm leading-tight">Nathan Koenigsberg</p>
                 <p className="font-inter text-accent text-xs mt-0.5">RE/MAX First</p>
                 <p className="font-inter text-white/60 text-xs mt-1">13+ yrs · City Centre, SW, SE, South, Okotoks</p>
                 <p className="font-inter text-accent text-xs mt-1 font-medium">✓ Your featured Calgary REALTOR®</p>
+              </div>
+              <div className="shrink-0" style={{ position: 'relative', width: '56px', height: '56px' }}>
+                <Image
+                  src="/images/top100-transparent.png"
+                  alt="RE/MAX Western Canada Top 100"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="56px"
+                />
               </div>
             </div>
           </div>

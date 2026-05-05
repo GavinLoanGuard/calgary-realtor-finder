@@ -52,12 +52,17 @@ export default function RealtorProfile() {
                   <span className="font-inter text-charcoal/20 text-xs">Add /public/nathan-koenigsberg.jpg</span>
                 </div>
               )}
-              {/* Overlay card */}
-              <div className="absolute bottom-4 left-4 bg-primary text-white p-4 rounded-sm max-w-[160px]">
-                <p className="font-playfair text-2xl font-bold">{nathan.yearsExperience} years</p>
-                <p className="font-inter text-white/70 text-xs mt-1">serving Calgary buyers &amp;</p>
-                <p className="font-inter text-white/70 text-xs">sellers across SE, NW, NE.</p>
-                <p className="font-inter italic text-white/50 text-xs mt-2">— {nathan.name}</p>
+              {/* Award badge overlay */}
+              <div className="absolute bottom-4 left-4 bg-white rounded-sm shadow-md p-2">
+                <div style={{ position: 'relative', width: '100px', height: '100px' }}>
+                  <Image
+                    src="/images/top100-transparent.png"
+                    alt="RE/MAX Western Canada Top 100 Individuals — Residential"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    sizes="100px"
+                  />
+                </div>
               </div>
             </div>
           </div>

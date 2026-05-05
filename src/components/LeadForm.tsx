@@ -10,17 +10,10 @@ interface LeadFormProps {
 
 type Intent = 'Buying a home' | 'Selling a home' | ''
 
-const nathanAreas = [
-  'City Centre', 'Calgary SW', 'Calgary SE',
-  'Calgary South', 'West Calgary', 'Okotoks',
+const allAreas = [
+  'City Centre', 'Calgary SW', 'Calgary SE', 'Calgary South', 'West Calgary',
+  'Okotoks', 'North Calgary', 'NE Calgary', 'Airdrie', 'Cochrane', 'Chestermere',
 ]
-
-const pendingAreas = [
-  'North Calgary', 'NE Calgary', 'Airdrie',
-  'Cochrane', 'Chestermere',
-]
-
-const allAreas = [...nathanAreas, ...pendingAreas]
 
 export default function LeadForm({ variant }: LeadFormProps) {
   const [step, setStep] = useState(1)
@@ -96,26 +89,15 @@ export default function LeadForm({ variant }: LeadFormProps) {
   }
 
   if (submitted) {
-    const isPending = pendingAreas.includes(location)
     return (
       <div className="bg-white shadow-lg p-8 flex flex-col items-center gap-4 text-center" style={{ borderRadius: 12 }}>
         <CheckCircle className="text-green-500" size={48} />
-        {isPending ? (
-          <>
-            <h2 className="font-playfair font-semibold text-xl text-primary">We&apos;re on it.</h2>
-            <p className="font-inter text-sm text-charcoal/70 leading-relaxed">
-              We&apos;re actively matching agents for your area. We&apos;ll reach out within 24 hours to introduce
-              you to a licensed Calgary REALTOR® who covers your community.
-            </p>
-          </>
-        ) : (
-          <>
-            <h2 className="font-playfair font-semibold text-xl text-primary">You&apos;re matched.</h2>
-            <p className="font-inter text-sm text-charcoal/70 leading-relaxed">
-              Nathan Koenigsberg from RE/MAX First will be in touch within 2 hours. Keep your phone nearby.
-            </p>
-          </>
-        )}
+        <>
+          <h2 className="font-playfair font-semibold text-xl text-primary">You&apos;re matched.</h2>
+          <p className="font-inter text-sm text-charcoal/70 leading-relaxed">
+            Nathan Koenigsberg from RE/MAX First will be in touch within 2 hours. Keep your phone nearby.
+          </p>
+        </>
         <Link
           href="/tools/mortgage-affordability"
           className="font-inter text-accent text-sm hover:underline mt-1"

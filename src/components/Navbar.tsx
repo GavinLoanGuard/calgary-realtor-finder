@@ -41,7 +41,7 @@ export default function Navbar() {
           <div className="hidden sm:flex items-center border-l border-white/20 pl-3">
             <div className="remax-branding" style={{ position: 'relative', width: '140px', height: '46px' }}>
               <Image
-                src="/images/2025-REMAXFIRST_BLACK-horizontal.png"
+                src="/images/2025-REMAXFIRST_CREAM-horizontal.png"
                 alt="RE/MAX First"
                 fill
                 style={{ objectFit: 'contain', objectPosition: 'left center' }}

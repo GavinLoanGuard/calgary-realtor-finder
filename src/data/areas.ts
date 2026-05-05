@@ -100,7 +100,7 @@ export const areas: Area[] = [
     slug: 'north-calgary',
     name: 'North Calgary',
     zone: 'North',
-    status: 'waitlist',
+    status: 'active',
     communities: [
       'Panorama Hills', 'Country Hills', 'Country Hills Village',
       'Coventry Hills', 'Harvest Hills', 'Hidden Valley', 'Sandstone Valley',
@@ -116,7 +116,7 @@ export const areas: Area[] = [
     slug: 'north-east-calgary',
     name: 'North East Calgary',
     zone: 'North East',
-    status: 'waitlist',
+    status: 'active',
     communities: [
       'Skyview Ranch', 'Saddle Ridge', 'Taradale', 'Martindale',
       'Castleridge', 'Falconridge', 'Whitehorn', 'Temple', 'Pineridge',
@@ -130,21 +130,21 @@ export const areas: Area[] = [
     slug: 'airdrie',
     name: 'Airdrie',
     zone: 'Airdrie',
-    status: 'waitlist',
+    status: 'active',
     communities: ['Airdrie']
   },
   {
     slug: 'cochrane',
     name: 'Cochrane',
     zone: 'Cochrane',
-    status: 'waitlist',
+    status: 'active',
     communities: ['Cochrane']
   },
   {
     slug: 'chestermere',
     name: 'Chestermere',
     zone: 'Chestermere',
-    status: 'waitlist',
+    status: 'active',
     communities: ['Chestermere']
   }
 ]

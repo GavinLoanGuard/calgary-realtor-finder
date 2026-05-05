@@ -36,12 +36,13 @@ export default function FeaturedAgentTeaser() {
           {/* Right — Nathan's card */}
           <div className="bg-white border border-charcoal/10 rounded-sm shadow-sm overflow-hidden">
             {/* Photo */}
-            <div className="relative h-80 bg-primary/10">
+            <div className="relative h-96 bg-primary/10">
               <Image
                 src={nathan.photo}
                 alt={nathan.photoAlt}
                 fill
-                className="object-cover object-center"
+                className="object-cover"
+                style={{ objectPosition: 'center 10%' }}
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

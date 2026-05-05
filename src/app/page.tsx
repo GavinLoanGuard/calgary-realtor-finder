@@ -10,6 +10,7 @@ import ListingsIntentBridge from '@/components/ListingsIntentBridge'
 import FAQAccordion from '@/components/FAQAccordion'
 import FAQSection from '@/components/FAQSection'
 import ToolsTeaser from '@/components/ToolsTeaser'
+import AgentProfile from '@/components/AgentProfile'
 import NeighbourhoodGrid from '@/components/NeighbourhoodGrid'
 import FeaturedAgentTeaser from '@/components/FeaturedAgentTeaser'
 import StickyBottomCTA from '@/components/StickyBottomCTA'
@@ -363,7 +364,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Section 9 — FAQ (AEO) */}
+      {/* Section 9 — Agent Profile */}
+      <AgentProfile />
+
+      {/* Section 10 — FAQ (AEO) */}
       <FAQSection />
 
       {/* Section 9b — Tools Teaser */}

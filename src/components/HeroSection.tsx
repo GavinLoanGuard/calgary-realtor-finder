@@ -62,7 +62,7 @@ export default function HeroSection() {
               </div>
               <div className="shrink-0" style={{ position: 'relative', width: '56px', height: '56px' }}>
                 <Image
-                  src="/images/top100-transparent.png"
+                  src="/images/top100-badge.png"
                   alt="RE/MAX Western Canada Top 100"
                   fill
                   style={{ objectFit: 'contain' }}

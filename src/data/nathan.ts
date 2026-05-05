@@ -21,24 +21,60 @@ export const nathan = {
   bio: "Born and raised in Calgary, Nathan Koenigsberg has spent thirteen years helping buyers and sellers navigate one of Canada's most dynamic real estate markets. A licensed REALTOR® with RE/MAX First, Nathan specializes in Calgary's inner city, Southeast, Southwest, West, and South communities, as well as Okotoks. His client-first approach and deep neighbourhood knowledge have made him a trusted resource for first-time buyers, move-up families, and investors alike.",
   reviews: [
     {
-      quote: 'Nathan walked us through every step of our first home purchase in Mahogany. Patient, honest, and never once felt pushy.',
-      author: 'Priya & Daniel',
-      neighbourhood: 'Mahogany',
+      quote: 'His uncanny ability to negotiate saved me over $25,000 on the listing price. From start to finish, working with Nathan was an absolute pleasure.',
+      author: 'Rick Seibel',
+      neighbourhood: 'Calgary',
       rating: 5,
     },
     {
-      quote: 'Sold our Tuscany house in 9 days, $40k over list. He knows the NW market inside out.',
-      author: 'The Hallaran Family',
-      neighbourhood: 'Tuscany',
+      quote: 'Despite the market being slow, we received multiple offers and our property sold faster than expected. We couldn\'t be happier with the results.',
+      author: 'Jeremy Dailo',
+      neighbourhood: 'Calgary',
       rating: 5,
     },
     {
-      quote: 'Relocated from Toronto. Nathan made it feel like we already had a friend in Calgary.',
-      author: 'M. Okafor',
-      neighbourhood: 'Beltline',
+      quote: 'Nathan is professional, punctual and thinks about things for the client that we didn\'t even consider. Do yourself a favour and give him a call!',
+      author: 'Sam Burchill',
+      neighbourhood: 'Calgary',
       rating: 5,
     },
-  ], // TODO: Replace with real verified reviews from Nathan
+    {
+      quote: 'As a healthcare professional I value efficiency and Nathan delivered. Many things we didn\'t know throughout the process and he helped bridge the gaps.',
+      author: 'Kenton Gryckiewicz',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+    {
+      quote: 'Nathan made a process that can be stressful and frustrating as smooth as we could have ever imagined. I would highly recommend Nathan to anybody.',
+      author: 'Stuart Rintoul',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+    {
+      quote: 'We have nothing but good things to say about Nathan! Professional, knowledgeable and personable — made the home buying experience enjoyable from start to finish.',
+      author: 'Hannah Prins',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+    {
+      quote: 'Even in the current depressed market we were able to sell our home within 2 weeks for our full asking price. Best Realtor I have worked with.',
+      author: 'Thomas Henderson',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+    {
+      quote: 'Being a single mom of 2 kids, working with Nathan has been a breath of fresh air. Transparent, honest, and truly has our best interest at heart.',
+      author: 'Mellissa Bodea',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+    {
+      quote: 'Nathan urged us to be patient and make sure we would be happy for the long term. We are still thrilled about our purchase even months after we moved in!',
+      author: 'Emily Raburn',
+      neighbourhood: 'Calgary',
+      rating: 5,
+    },
+  ],
   recentSales: [
     {
       address: '87 Prestwick Close SE',

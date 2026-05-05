@@ -102,7 +102,7 @@ export default function Footer() {
               <p className="font-inter text-white/60 text-sm">{nathan.title}</p>
               <div className="remax-branding mt-3" style={{ position: 'relative', width: '100px', height: '60px' }}>
                 <Image
-                  src="/images/2025-REMAXFIRST_CREAM-stacked.png"
+                  src="/images/2025-REMAXFIRST_BLACK_Stacked-2.png"
                   alt="RE/MAX First"
                   fill
                   style={{ objectFit: 'contain', objectPosition: 'left center' }}

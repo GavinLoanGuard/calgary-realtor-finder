@@ -8,6 +8,7 @@ import { Menu, X, ChevronDown } from 'lucide-react'
 const navLinks = [
   { label: 'Find a Realtor', href: '/' },
   { label: 'Calgary', href: '/calgary-realtors' },
+  { label: 'Listings', href: '/listings' },
   { label: 'Resources', href: '/resources' },
   { label: 'Contact', href: '/contact' },
 ]
@@ -38,13 +39,13 @@ export default function Navbar() {
             </div>
           </Link>
           <div className="hidden sm:flex items-center border-l border-white/20 pl-3">
-            <div className="remax-branding" style={{ position: 'relative', width: '120px', height: '40px' }}>
+            <div className="remax-branding" style={{ position: 'relative', width: '140px', height: '46px' }}>
               <Image
-                src="/images/2025-REMAXFIRST_CREAM-horizontal.png"
+                src="/images/2025-REMAXFIRST_BLACK-horizontal.png"
                 alt="RE/MAX First"
                 fill
                 style={{ objectFit: 'contain', objectPosition: 'left center' }}
-                sizes="120px"
+                sizes="140px"
               />
             </div>
           </div>

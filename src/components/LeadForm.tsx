@@ -36,8 +36,8 @@ export default function LeadForm({ variant }: LeadFormProps) {
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<{ firstName?: string; email?: string; phone?: string }>({})
+  const [submitError, setSubmitError] = useState('')
 
-  // Preserved submission handler — logic unchanged from original
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     const newErrors: { firstName?: string; email?: string; phone?: string } = {}
@@ -49,24 +49,40 @@ export default function LeadForm({ variant }: LeadFormProps) {
       return
     }
     setSubmitting(true)
-    await fetch('https://api.web3forms.com/submit', {
+    setSubmitError('')
+
+    const searchParams = new URLSearchParams(
+      typeof window !== 'undefined' ? window.location.search : ''
+    )
+
+    const res = await fetch('/api/submit-lead', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        access_key: '0289f3a5-95d1-4863-9ccf-ef3924d6c7c5',
-        subject: `New Realtor Match — ${firstName} ${lastName} · ${location} · ${intent}`,
-        intent,
         firstName,
         lastName,
         email,
         phone,
-        neighbourhood: location,
-        timeline,
+        intent,
+        area: location,
         priceRange,
+        timeline,
         propertyType,
+        sourceUrl: typeof window !== 'undefined' ? window.location.href : '',
+        utmSource: searchParams.get('utm_source') ?? undefined,
+        utmMedium: searchParams.get('utm_medium') ?? undefined,
+        utmCampaign: searchParams.get('utm_campaign') ?? undefined,
       }),
     })
+
     setSubmitting(false)
+
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}))
+      setSubmitError(data.error ?? 'Something went wrong. Please call (403) 536-9024.')
+      return
+    }
+
     if (typeof window !== 'undefined' && (window as any).dataLayer) {
       ;(window as any).dataLayer.push({
         event: 'realtor_match_request',
@@ -324,6 +340,10 @@ export default function LeadForm({ variant }: LeadFormProps) {
       <button type="submit" disabled={submitting} className={ctaBtn}>
         {submitting ? 'Matching you...' : 'MATCH ME WITH A REALTOR® →'}
       </button>
+
+      {submitError && (
+        <p className="font-inter text-xs text-red-500 text-center -mt-1">{submitError}</p>
+      )}
 
       <button type="button" onClick={() => setStep(2)} className={backLink}>
         ← Back

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Shield, CheckCircle, Clock, Star } from 'lucide-react'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import HeroSection from '@/components/HeroSection'
 import RealtorProfile from '@/components/RealtorProfile'
@@ -17,9 +18,11 @@ import { calgaryNeighbourhoods } from '@/data/neighbourhoods'
 import { organizationSchema, nathanSchema, localBusinessSchema, faqSchema } from '@/data/schema'
 
 export const metadata: Metadata = {
-  title: 'Find a Calgary REALTOR® | Free Matching Service | Calgary Realtor Finder',
+  title: {
+    absolute: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
+  },
   description:
-    'Looking for a Calgary REALTOR®? Our free matching service connects buyers and sellers with licensed Calgary real estate agents who know your neighbourhood. Takes 60 seconds.',
+    'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
 }
 
 const placeholderProperties = [
@@ -135,6 +138,43 @@ export default function Home() {
 
       {/* Section 3 — Featured Realtor */}
       <RealtorProfile />
+
+      {/* Section 3b — IDX Listings Preview */}
+      <section className="bg-background py-20 px-8 border-t border-charcoal/10">
+        <div className="max-w-7xl mx-auto">
+          <p className="font-inter text-accent text-xs uppercase tracking-widest">LIVE MLS® LISTINGS</p>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4 mt-2">
+            <h2 className="font-playfair text-4xl text-primary font-bold">
+              Browse Calgary MLS Listings
+            </h2>
+            <p className="font-inter text-charcoal/50 text-sm md:text-right max-w-xs shrink-0">
+              Access real-time Calgary MLS data. Our agents know these communities inside and out.
+            </p>
+          </div>
+          <div className="mt-8 w-full overflow-hidden rounded-sm border border-charcoal/10">
+            <iframe
+              src="https://matrix.pillarnine.com/Matrix/public/IDX.aspx?idx=ad2a41b"
+              width="100%"
+              title="Calgary MLS Listings Preview"
+              loading="lazy"
+              style={{
+                display: 'block',
+                height: '480px',
+                minHeight: '400px',
+                border: 'none',
+              }}
+            />
+          </div>
+          <div className="mt-6 flex justify-end">
+            <Link
+              href="/listings"
+              className="font-inter text-accent font-medium text-sm hover:text-accent-light transition-colors"
+            >
+              View All Listings →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Section 4 — How It Works */}
       <section className="bg-background py-20 px-8">
@@ -313,9 +353,12 @@ export default function Home() {
             <p className="font-inter text-charcoal/30 text-xs uppercase tracking-widest">
               LISTING DATA PROVIDED VIA ALBERTA MLS® SYSTEM · UPDATED DAILY
             </p>
-            <button className="font-inter text-accent text-sm font-medium hover:text-accent-light transition-colors">
+            <Link
+              href="/listings"
+              className="font-inter text-accent text-sm font-medium hover:text-accent-light transition-colors"
+            >
               Browse all current listings →
-            </button>
+            </Link>
           </div>
         </div>
       </section>

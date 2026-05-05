@@ -65,6 +65,17 @@ export default function HeroSection() {
 
           {/* Right column — form card */}
           <div id="lead-form" data-hide-sticky="true">
+            <div className="remax-branding flex justify-center mb-3">
+              <div style={{ position: 'relative', width: '100px', height: '33px' }}>
+                <Image
+                  src="/images/2025-REMAXFIRST_RED-horizontal.png"
+                  alt="RE/MAX First"
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  sizes="100px"
+                />
+              </div>
+            </div>
             <LeadForm variant="hero" />
           </div>
         </div>

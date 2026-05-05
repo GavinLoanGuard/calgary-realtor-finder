@@ -69,6 +69,17 @@ export default function FeaturedAgentTeaser() {
                 <p className="font-inter text-charcoal/70 text-sm">✓ Active CREB Member</p>
               </div>
 
+              {/* Award badge */}
+              <div className="mt-4" style={{ position: 'relative', width: '90px', height: '90px' }}>
+                <Image
+                  src="/images/top100-transparent.png"
+                  alt="RE/MAX Western Canada Top 100 Individuals — Residential"
+                  fill
+                  style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                  sizes="90px"
+                />
+              </div>
+
               {/* Recent sales */}
               <div className="mt-4 border-t border-charcoal/10 pt-4">
                 <p className="font-inter text-charcoal/40 text-xs uppercase tracking-wider mb-2">Recent sales</p>

@@ -78,6 +78,17 @@ export default function RealtorProfile() {
               <p className="font-inter text-charcoal/70 text-sm">✓ Recent sales: McKenzie Towne $599,900 · Canyon Meadows $1,089,000 · Shawnee Slopes $1,340,000</p>
             </div>
 
+            {/* Award badge */}
+            <div className="mt-3" style={{ position: 'relative', width: '110px', height: '110px' }}>
+              <Image
+                src="/images/top100-transparent.png"
+                alt="RE/MAX Western Canada Top 100 Individuals — Residential"
+                fill
+                style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                sizes="110px"
+              />
+            </div>
+
             {/* Badge pills */}
             <div className="flex flex-wrap gap-2 mt-3">
               <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-accent/10 text-accent border-accent/20">

@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { nathan } from '@/data/nathan'
 import { nathanSchema } from '@/data/schema'
-import PropertyCard from './PropertyCard'
 
 export default function RealtorProfile() {
   const jsonLd = JSON.stringify(nathanSchema)
@@ -75,7 +74,6 @@ export default function RealtorProfile() {
               <p className="font-inter text-charcoal/70 text-sm">✓ RE/MAX First — Calgary's top-producing RE/MAX office</p>
               <p className="font-inter text-charcoal/70 text-sm">✓ CREB Member — Calgary Real Estate Board licensed</p>
               <p className="font-inter text-charcoal/70 text-sm">✓ Serving Calgary buyers &amp; sellers across City Centre, SW, SE &amp; Okotoks</p>
-              <p className="font-inter text-charcoal/70 text-sm">✓ Recent sales: McKenzie Towne $599,900 · Canyon Meadows $1,089,000 · Shawnee Slopes $1,340,000</p>
             </div>
 
             {/* Award badge */}
@@ -127,18 +125,6 @@ export default function RealtorProfile() {
                       — {review.author} · {review.neighbourhood}
                     </p>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Recently sold property cards */}
-            <div className="mt-6">
-              <p className="font-inter text-charcoal/40 text-xs uppercase tracking-widest mb-4">
-                RECENTLY SOLD
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {nathan.recentSales.map(({ photo: _photo, ...sale }, i) => (
-                  <PropertyCard key={i} {...sale} />
                 ))}
               </div>
             </div>

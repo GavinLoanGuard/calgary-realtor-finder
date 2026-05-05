@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 import { resolveAgent } from '@/config/agentRouting'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Lazy — instantiated inside the handler so the build doesn't evaluate it without env vars
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 interface LeadPayload {
   firstName: string
@@ -150,6 +153,8 @@ export async function POST(request: NextRequest) {
     const toList = agentEmail ? [agentEmail] : []
     const ccList = process.env.GAVIN_EMAIL ? [process.env.GAVIN_EMAIL] : []
     const primaryTo = toList.length > 0 ? toList : ccList
+
+    const resend = getResend()
 
     if (primaryTo.length > 0) {
       await resend.emails.send({

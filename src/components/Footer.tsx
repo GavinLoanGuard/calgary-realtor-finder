@@ -100,8 +100,17 @@ export default function Footer() {
                 {nathan.name}
               </p>
               <p className="font-inter text-white/60 text-sm">{nathan.title}</p>
-              <p className="font-inter text-accent text-xs mt-1">
-                {nathan.brokerage}
+              <div className="remax-branding mt-3" style={{ position: 'relative', width: '100px', height: '60px' }}>
+                <Image
+                  src="/images/2025-REMAXFIRST_CREAM-stacked.png"
+                  alt="RE/MAX First"
+                  fill
+                  style={{ objectFit: 'contain', objectPosition: 'left center' }}
+                  sizes="100px"
+                />
+              </div>
+              <p className="font-inter text-white/50 text-xs mt-2 leading-relaxed max-w-[200px]">
+                {nathan.name} is a licensed REALTOR® with RE/MAX First in Calgary, Alberta.
               </p>
               <Link
                 href="/contact"

@@ -22,11 +22,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://calgaryrealtorfinder.ca'),
   title: {
-    default: 'Calgary Realtor Finder | Find a Licensed REALTOR® in Calgary, Alberta',
+    default: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First · Calgary, Alberta',
     template: '%s | Calgary Realtor Finder',
   },
   description:
-    'Connect with trusted, licensed Calgary REALTORS® who know your neighbourhood. Free matching service. No obligation. Serving Calgary, Edmonton and all of Alberta.',
+    'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free matching service. No obligation. Serving Calgary, Edmonton and all of Alberta.',
   keywords: [
     'Calgary realtor',
     'Calgary real estate agent',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     url: 'https://calgaryrealtorfinder.ca',
     siteName: 'Calgary Realtor Finder',
-    title: 'Calgary Realtor Finder | Find a Licensed REALTOR® in Calgary',
+    title: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First',
     description:
-      'Connect with trusted, licensed Calgary REALTORS® who know your neighbourhood. Free matching service. No obligation.',
+      'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free matching service. No obligation.',
     images: [
       {
         url: '/og-default.png',
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Calgary Realtor Finder | Find a Licensed REALTOR® in Calgary',
+    title: 'Calgary Realtor Finder | Nathan Koenigsberg · RE/MAX First',
     description:
-      'Connect with trusted, licensed Calgary REALTORS® who know your neighbourhood. Free, no obligation.',
+      'Connect with Nathan Koenigsberg, a licensed Calgary REALTOR® with RE/MAX First. Free, no obligation.',
     images: ['/og-default.png'],
   },
   robots: {

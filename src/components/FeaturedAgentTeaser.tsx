@@ -80,14 +80,6 @@ export default function FeaturedAgentTeaser() {
                 />
               </div>
 
-              {/* Recent sales */}
-              <div className="mt-4 border-t border-charcoal/10 pt-4">
-                <p className="font-inter text-charcoal/40 text-xs uppercase tracking-wider mb-2">Recent sales</p>
-                <p className="font-inter text-charcoal/70 text-sm">
-                  McKenzie Towne $599,900 · Canyon Meadows $1,089,000 · Shawnee Slopes $1,340,000
-                </p>
-              </div>
-
               {/* CTA */}
               <a
                 href="/#lead-form"

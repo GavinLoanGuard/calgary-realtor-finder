@@ -183,7 +183,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Lead submission error:', error)
     return NextResponse.json(
-      { error: 'Submission failed. Please call us directly at (403) 536-9024.' },
+      { error: 'Submission failed. Please call us directly at (403) 465-3937.' },
       { status: 500 }
     )
   }

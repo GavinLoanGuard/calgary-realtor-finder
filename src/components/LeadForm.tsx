@@ -72,7 +72,7 @@ export default function LeadForm({ variant }: LeadFormProps) {
 
     if (!res.ok) {
       const data = await res.json().catch(() => ({}))
-      setSubmitError(data.error ?? 'Something went wrong. Please call (403) 536-9024.')
+      setSubmitError(data.error ?? 'Something went wrong. Please call (403) 465-3937.')
       return
     }
 

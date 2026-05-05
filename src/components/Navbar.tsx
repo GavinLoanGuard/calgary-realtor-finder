@@ -91,7 +91,7 @@ export default function Navbar() {
 
         {/* Desktop right */}
         <div className="hidden lg:flex items-center gap-5">
-          <span className="font-inter text-sm text-white/70">(403) 536-9024</span>
+          <span className="font-inter text-sm text-white/70">(403) 465-3937</span>
           <Link
             href="/contact"
             className="bg-accent text-white font-inter font-semibold text-sm px-5 py-2 rounded-sm hover:bg-accent-light transition-colors"

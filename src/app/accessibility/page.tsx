@@ -60,7 +60,7 @@ export default function AccessibilityPage() {
             <h2 className="font-playfair text-xl text-primary font-semibold mb-3">Alternative Access</h2>
             <p>
               If you are unable to use any feature of our website due to a disability, you can reach
-              our matching service by phone at (403) 536-9024, Monday through Saturday, 8am to 8pm MT.
+              our matching service by phone at (403) 465-3937, Monday through Saturday, 8am to 8pm MT.
               A team member will assist you in completing a realtor match request.
             </p>
           </section>

@@ -68,7 +68,7 @@ export default function HeroSection() {
             <div className="remax-branding flex justify-center mb-3">
               <div style={{ position: 'relative', width: '100px', height: '33px' }}>
                 <Image
-                  src="/images/2025-REMAXFIRST_RED-horizontal.png"
+                  src="/images/2025-REMAXFIRST_CREAM-horizontal.png"
                   alt="RE/MAX First"
                   fill
                   style={{ objectFit: 'contain' }}

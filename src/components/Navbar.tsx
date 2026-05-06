@@ -180,7 +180,7 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="lg:hidden bg-primary border-t border-white/10 px-6 pb-6 pt-4 flex flex-col gap-4">
+        <div className="lg:hidden bg-primary border-t border-white/10 px-6 pb-6 pt-4 flex flex-col gap-4 overflow-y-auto max-h-[calc(100dvh-72px)]">
           {navLinks.map((link) => (
             <Link
               key={link.href}

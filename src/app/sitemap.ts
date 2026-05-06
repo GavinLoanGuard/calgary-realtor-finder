@@ -43,6 +43,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/calgary/copperfield',
   ]
 
+  const realtorPageRoutes = [
+    '/realtor-mahogany-calgary',
+    '/realtor-auburn-bay-calgary',
+    '/realtor-cranston-calgary',
+    '/realtor-seton-calgary',
+    '/realtor-mckenzie-towne-calgary',
+    '/realtor-evergreen-calgary',
+    '/realtor-signal-hill-calgary',
+    '/realtor-aspen-woods-calgary',
+    '/realtor-discovery-ridge-calgary',
+    '/realtor-tuscany-calgary',
+    '/realtor-rocky-ridge-calgary',
+    '/realtor-royal-oak-calgary',
+    '/realtor-okotoks',
+    '/realtor-airdrie',
+    '/realtor-cochrane',
+    '/how-much-does-a-realtor-cost-calgary',
+    '/first-time-home-buyer-calgary-realtor',
+    '/selling-your-home-calgary',
+    '/calgary-realtor-vs-private-sale',
+  ]
+
   const toolRoutes = [
     '/tools/mortgage-affordability',
     '/tools/realtor-commission',
@@ -62,6 +84,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const realtorPageEntries: MetadataRoute.Sitemap = realtorPageRoutes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
   const toolEntries: MetadataRoute.Sitemap = toolRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified,
@@ -69,5 +98,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...mainRouteEntries, ...neighbourhoodEntries, ...toolEntries]
+  return [...mainRouteEntries, ...neighbourhoodEntries, ...realtorPageEntries, ...toolEntries]
 }

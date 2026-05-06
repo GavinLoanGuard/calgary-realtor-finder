@@ -8,14 +8,14 @@ import { albertaCities } from '@/data/cities'
 export const metadata: Metadata = {
   title: 'Find a Realtor Across Alberta | Calgary Realtor Finder',
   description:
-    'Find RECA-licensed realtors in every major Alberta city. Calgary, Edmonton, Red Deer, Lethbridge, Grande Prairie and more. Free matching, no obligation.',
+    'Find licensed realtors in every major Alberta city. Calgary, Edmonton, Red Deer, Lethbridge, Grande Prairie and more. Free matching, no obligation.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/alberta-cities',
   },
   openGraph: {
     title: 'Find a Realtor Across Alberta | Calgary Realtor Finder',
     description:
-      'Find RECA-licensed realtors in every major Alberta city. Calgary, Edmonton, Red Deer, Lethbridge, Grande Prairie and more. Free matching, no obligation.',
+      'Find licensed realtors in every major Alberta city. Calgary, Edmonton, Red Deer, Lethbridge, Grande Prairie and more. Free matching, no obligation.',
     url: 'https://calgaryrealtorfinder.ca/alberta-cities',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',

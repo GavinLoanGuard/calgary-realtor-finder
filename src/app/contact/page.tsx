@@ -45,7 +45,7 @@ export default function ContactPage() {
           Get Matched With a Calgary REALTOR®
         </h1>
         <p className="text-charcoal/60 text-lg mt-4 leading-relaxed max-w-2xl">
-          Fill out the form and we'll introduce you to a RECA-licensed Calgary REALTOR® who
+          Fill out the form and we'll introduce you to a licensed Calgary REALTOR® who
           specializes in your neighbourhood and price range. Most matches happen within a few hours.
           There is no fee and no obligation to proceed.
         </p>

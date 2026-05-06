@@ -22,7 +22,7 @@ export default function TermsPage() {
               Calgary Realtor Finder operates a free referral and matching service that connects home
               buyers and sellers with licensed REALTORS® in Calgary and surrounding communities. We do
               not directly provide real estate services and are not a brokerage. All REALTORS® introduced
-              through our service are independently licensed under RECA (the Real Estate Council of Alberta).
+              through our service are independently licensed through the Real Estate Council of Alberta.
             </p>
           </section>
 
@@ -59,11 +59,11 @@ export default function TermsPage() {
           </section>
 
           <section>
-            <h2 className="font-playfair text-xl text-primary font-semibold mb-3">5. RECA Compliance</h2>
+            <h2 className="font-playfair text-xl text-primary font-semibold mb-3">5. Regulatory Compliance</h2>
             <p>
               All advertising and marketing on this website is intended to comply with the Real Estate
               Council of Alberta&apos;s advertising standards. If you believe any content on this site
-              violates RECA guidelines, please contact us at hello@calgaryrealtorfinder.ca.
+              violates industry guidelines, please contact us at hello@calgaryrealtorfinder.ca.
             </p>
           </section>
 

@@ -9,14 +9,14 @@ import { nathan } from '@/data/nathan'
 export const metadata: Metadata = {
   title: "About Calgary Realtor Finder | Alberta's Independent Realtor Directory",
   description:
-    'Calgary Realtor Finder connects Alberta home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our independent matching service.',
+    'Calgary Realtor Finder connects Alberta home buyers and sellers with licensed REALTORS® at no cost. Learn about our independent matching service.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/about',
   },
   openGraph: {
     title: "About Calgary Realtor Finder | Alberta's Independent Realtor Directory",
     description:
-      'Calgary Realtor Finder connects Alberta home buyers and sellers with RECA-licensed REALTORS® at no cost. Learn about our independent matching service.',
+      'Calgary Realtor Finder connects Alberta home buyers and sellers with licensed REALTORS® at no cost. Learn about our independent matching service.',
     url: 'https://calgaryrealtorfinder.ca/about',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -45,12 +45,12 @@ export default function AboutPage() {
       {
         question: 'Is Calgary Realtor Finder a real estate brokerage?',
         answer:
-          'No. Calgary Realtor Finder is an independent directory and referral service. We are not licensed to trade in real estate. Our featured partner realtor, Nathan Koenigsberg, is a licensed REALTOR® with RE/MAX First, regulated by RECA.',
+          'No. Calgary Realtor Finder is an independent directory and referral service. We are not licensed to trade in real estate. Our featured partner realtor, Nathan Koenigsberg, is a licensed REALTOR® with RE/MAX First, regulated by the Real Estate Council of Alberta.',
       },
       {
         question: 'How do you vet the realtors you feature?',
         answer:
-          'We verify RECA license status, brokerage standing, and recent transaction history for every agent we feature. We also review client feedback and neighbourhood-specific activity before making any introduction.',
+          'We verify Alberta real estate licence status, brokerage standing, and recent transaction history for every agent we feature. We also review client feedback and neighbourhood-specific activity before making any introduction.',
       },
     ]),
   ])
@@ -76,7 +76,7 @@ export default function AboutPage() {
             <p className="text-charcoal/70 leading-relaxed mt-4">
               Calgary Realtor Finder is an independent directory and matching service. We are not a
               brokerage. We do not list properties. We connect buyers and sellers with one carefully
-              selected, RECA-licensed REALTOR® who specializes in their specific neighbourhood and
+              selected, licensed REALTOR® who specializes in their specific neighbourhood and
               price range — then step back.
             </p>
             <p className="text-charcoal/70 leading-relaxed mt-4">

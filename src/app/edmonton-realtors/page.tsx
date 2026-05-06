@@ -55,7 +55,7 @@ export default function EdmontonRealtorsPage() {
       {
         question: 'How do I verify a realtor is licensed in Edmonton?',
         answer:
-          'All Alberta REALTORS® are licensed through RECA regardless of city. Search the RECA public registry by name to verify current license status, brokerage affiliation, and any disciplinary history.',
+          'All Alberta REALTORS® are licensed through the Real Estate Council of Alberta regardless of city. Search the Alberta public real estate registry by name to verify current license status, brokerage affiliation, and any disciplinary history.',
       },
     ]),
   ])

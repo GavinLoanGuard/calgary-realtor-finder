@@ -65,19 +65,15 @@ export default function FeaturedAgentTeaser() {
 
               {/* Credentials */}
               <div className="mt-4 space-y-1">
-                <p className="font-inter text-charcoal/70 text-sm">✓ RECA Licensed</p>
+                <p className="font-inter text-charcoal/70 text-sm">✓ Licensed</p>
                 <p className="font-inter text-charcoal/70 text-sm">✓ Active CREB Member</p>
               </div>
 
               {/* Award badge */}
-              <div className="mt-4" style={{ position: 'relative', width: '90px', height: '90px' }}>
-                <Image
-                  src="/images/top100-badge.png"
-                  alt="RE/MAX Western Canada Top 100 Individuals — Residential"
-                  fill
-                  style={{ objectFit: 'contain', objectPosition: 'left center' }}
-                  sizes="90px"
-                />
+              <div className="mt-4">
+                <span className="font-inter text-xs font-bold tracking-widest uppercase text-accent border border-accent/30 bg-accent/10 px-3 py-1 rounded-sm">
+                  ★ Top 100 Western Canada REALTOR®
+                </span>
               </div>
 
               {/* CTA */}

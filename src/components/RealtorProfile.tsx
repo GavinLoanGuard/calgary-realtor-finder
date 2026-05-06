@@ -77,14 +77,10 @@ export default function RealtorProfile() {
             </div>
 
             {/* Award badge */}
-            <div className="mt-3" style={{ position: 'relative', width: '110px', height: '110px' }}>
-              <Image
-                src="/images/top100-badge.png"
-                alt="RE/MAX Western Canada Top 100 Individuals — Residential"
-                fill
-                style={{ objectFit: 'contain', objectPosition: 'left center' }}
-                sizes="110px"
-              />
+            <div className="mt-3">
+              <span className="font-inter text-xs font-bold tracking-widest uppercase text-accent border border-accent/30 bg-accent/10 px-3 py-1 rounded-sm">
+                ★ Top 100 Western Canada REALTOR®
+              </span>
             </div>
 
             {/* Badge pills */}

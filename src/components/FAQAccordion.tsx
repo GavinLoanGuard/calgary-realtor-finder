@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'How do I know if a realtor is licensed in Alberta?',
     answer:
-      'The Real Estate Council of Alberta (RECA) maintains a free, public registry. Search by name or license number and you\'ll see the agent\'s status, brokerage affiliation, and any disciplinary history. Every realtor we feature is verified before being introduced.',
+      'The Real Estate Council of Alberta maintains a free, public registry. Search by name or license number and you\'ll see the agent\'s status, brokerage affiliation, and any disciplinary history. Every realtor we feature is verified before being introduced.',
   },
 ]
 

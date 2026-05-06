@@ -28,7 +28,7 @@ export default function PageLayout({ children, sidebar = true }: PageLayoutProps
                 <div className="mt-6 bg-primary rounded-sm p-6">
                   <p className="text-white font-semibold text-sm">Featured REALTOR®</p>
                   <p className="text-accent font-bold text-lg mt-1 font-playfair">Nathan Koenigsberg</p>
-                  <p className="text-white/60 text-xs mt-1">RE/MAX First · RECA Licensed</p>
+                  <p className="text-white/60 text-xs mt-1">RE/MAX First · Licensed</p>
                   <p className="text-white/50 text-xs mt-3 leading-relaxed">
                     Serving Calgary buyers and sellers across SE, SW, NW, NE, City Centre, Airdrie and Okotoks.
                   </p>

@@ -14,7 +14,7 @@ export default function AgentProfile() {
           <div className="flex flex-col items-center">
             <div className="relative w-48 h-48 rounded-full overflow-hidden">
               <Image
-                src="/NathanKoenigsberg_headshot.webp"
+                src="/images/nathan-main.jpg"
                 alt="Nathan Koenigsberg — Licensed Calgary REALTOR® with RE/MAX First"
                 fill
                 className="object-cover object-top"

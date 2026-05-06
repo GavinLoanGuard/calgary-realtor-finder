@@ -6,14 +6,14 @@ import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'Grande Prairie Realtors & Real Estate Agents | Calgary Realtor Finder',
   description:
-    'Find licensed Grande Prairie realtors and real estate agents in Peace Country Alberta. Free REALTOR® matching. RECA-verified agents only.',
+    'Find licensed Grande Prairie realtors and real estate agents in Peace Country Alberta. Free REALTOR® matching. independently verified agents only.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/grande-prairie-realtors',
   },
   openGraph: {
     title: 'Grande Prairie Realtors & Real Estate Agents | Calgary Realtor Finder',
     description:
-      'Find licensed Grande Prairie realtors and real estate agents in Peace Country Alberta. Free REALTOR® matching. RECA-verified agents only.',
+      'Find licensed Grande Prairie realtors and real estate agents in Peace Country Alberta. Free REALTOR® matching. independently verified agents only.',
     url: 'https://calgaryrealtorfinder.ca/grande-prairie-realtors',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -68,7 +68,7 @@ export default function GrandePrairieRealtorsPage() {
         <p className="text-charcoal/60 text-lg mt-4 leading-relaxed max-w-2xl">
           Grande Prairie is the commercial hub of Northwest Alberta and Peace Country — an
           energy-driven economy with strong demand for both residential and investment properties.
-          We connect Grande Prairie buyers and sellers with RECA-licensed agents who know the local
+          We connect Grande Prairie buyers and sellers with licensed agents who know the local
           market's unique cycles.
         </p>
         <div className="mt-12 p-8 bg-charcoal/5 rounded-sm border border-charcoal/10">

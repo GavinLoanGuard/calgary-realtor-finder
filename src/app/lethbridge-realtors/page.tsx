@@ -6,14 +6,14 @@ import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'Lethbridge Realtors & Real Estate Agents | Calgary Realtor Finder',
   description:
-    'Find licensed Lethbridge realtors and real estate agents in Southern Alberta. Free REALTOR® matching. Verified RECA-licensed agents only.',
+    'Find licensed Lethbridge realtors and real estate agents in Southern Alberta. Free REALTOR® matching. Verified licensed agents only.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/lethbridge-realtors',
   },
   openGraph: {
     title: 'Lethbridge Realtors & Real Estate Agents | Calgary Realtor Finder',
     description:
-      'Find licensed Lethbridge realtors and real estate agents in Southern Alberta. Free REALTOR® matching. Verified RECA-licensed agents only.',
+      'Find licensed Lethbridge realtors and real estate agents in Southern Alberta. Free REALTOR® matching. Verified licensed agents only.',
     url: 'https://calgaryrealtorfinder.ca/lethbridge-realtors',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',

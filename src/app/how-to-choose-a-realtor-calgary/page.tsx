@@ -7,14 +7,14 @@ import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'How to Choose a Realtor in Calgary | Calgary Realtor Finder Guide',
   description:
-    'A practical guide to choosing the right Calgary realtor. What to look for, questions to ask, how to verify RECA licensing, and red flags to avoid.',
+    'A practical guide to choosing the right Calgary realtor. What to look for, questions to ask, how to verify Alberta real estate licensing, and red flags to avoid.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/how-to-choose-a-realtor-calgary',
   },
   openGraph: {
     title: 'How to Choose a Realtor in Calgary | Calgary Realtor Finder Guide',
     description:
-      'A practical guide to choosing the right Calgary realtor. What to look for, questions to ask, how to verify RECA licensing, and red flags to avoid.',
+      'A practical guide to choosing the right Calgary realtor. What to look for, questions to ask, how to verify Alberta real estate licensing, and red flags to avoid.',
     url: 'https://calgaryrealtorfinder.ca/how-to-choose-a-realtor-calgary',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -43,7 +43,7 @@ export default function HowToChooseRealtorPage() {
       {
         question: 'What should I look for in a Calgary realtor?',
         answer:
-          'Three things matter most: current RECA licensing (verifiable on the RECA public registry), neighbourhood-specific transaction history in your target area, and communication style. A great agent for McKenzie Towne may not be the right fit for Tuscany — local expertise at the neighbourhood level matters more than total volume.',
+          'Three things matter most: current Alberta real estate licensing (verifiable on the Alberta's public real estate registry), neighbourhood-specific transaction history in your target area, and communication style. A great agent for McKenzie Towne may not be the right fit for Tuscany — local expertise at the neighbourhood level matters more than total volume.',
       },
       {
         question: 'What questions should I ask a realtor before hiring them?',
@@ -53,7 +53,7 @@ export default function HowToChooseRealtorPage() {
       {
         question: "How do I verify a Calgary realtor's license?",
         answer:
-          "Visit the RECA public registry at reca.ca and search by the agent's name. You'll see their current license status, brokerage affiliation, license type, and any disciplinary history. Every agent we feature has been verified through this registry before being introduced.",
+          "Visit the Alberta's public real estate registry at realestate.alberta.ca and search by the agent's name. You'll see their current license status, brokerage affiliation, license type, and any disciplinary history. Every agent we feature has been verified through this registry before being introduced.",
       },
       {
         question: 'What are red flags when choosing a Calgary realtor?',
@@ -71,7 +71,7 @@ export default function HowToChooseRealtorPage() {
     'How do you communicate — email, text, phone — and what is your typical response time?',
     'Can you provide three references from recent clients in my price range?',
     'What is your commission rate and what does it include?',
-    'Have you had any complaints filed with RECA?',
+    'Have you ever had a formal complaint filed against you?',
   ]
 
   const redFlags = [
@@ -123,11 +123,11 @@ export default function HowToChooseRealtorPage() {
         <div className="mt-12 space-y-10">
           <div className="space-y-6 text-charcoal/70 leading-relaxed">
             <h2 className="font-playfair text-2xl font-bold text-primary">
-              Step 1 — Verify Their RECA License
+              Step 1 — Verify Their the regulator License
             </h2>
             <p>
               Every practicing real estate agent in Alberta must hold a current license issued by
-              the Real Estate Council of Alberta (RECA). This is non-negotiable. Visit reca.ca,
+              the Real Estate Council of Alberta. This is non-negotiable. Visit realestate.alberta.ca,
               search the public registry by the agent&apos;s name, and confirm their license is active,
               their brokerage affiliation is current, and their license type covers the transaction
               you&apos;re undertaking (residential, commercial, property management).
@@ -235,7 +235,7 @@ export default function HowToChooseRealtorPage() {
               We&apos;ve already done the vetting for you.
             </h2>
             <p className="text-white/70 mt-3 leading-relaxed">
-              Our featured REALTOR® has been independently verified for RECA license status,
+              Our featured REALTOR® has been independently verified for Alberta real estate licence status,
               neighbourhood transaction history, and client satisfaction. Fill out our form and
               we&apos;ll make the introduction.
             </p>

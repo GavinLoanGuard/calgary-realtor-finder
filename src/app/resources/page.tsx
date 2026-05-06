@@ -26,14 +26,14 @@ const resourceCards = [
   {
     title: 'How to Choose a Realtor in Calgary',
     description:
-      'What to look for, what to ask, how to verify RECA licensing, and red flags to avoid when choosing a Calgary agent.',
+      'What to look for, what to ask, how to verify Alberta real estate licensing, and red flags to avoid when choosing a Calgary agent.',
     href: '/how-to-choose-a-realtor-calgary',
     label: 'Read the guide →',
   },
   {
     title: 'Top Realtors in Calgary 2026',
     description:
-      'Our independently vetted featured agents — verified for RECA licence standing, neighbourhood transaction history, and client satisfaction.',
+      'Our independently vetted featured agents — verified for Alberta real estate licence standing, neighbourhood transaction history, and client satisfaction.',
     href: '/top-realtors-calgary',
     label: 'View top agents →',
   },

@@ -6,14 +6,14 @@ import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
 export const metadata: Metadata = {
   title: 'Red Deer Realtors & Real Estate Agents | Calgary Realtor Finder',
   description:
-    'Find licensed Red Deer realtors and real estate agents in Central Alberta. Free REALTOR® matching service. Verified RECA-licensed agents only.',
+    'Find licensed Red Deer realtors and real estate agents in Central Alberta. Free REALTOR® matching service. Verified licensed agents only.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/red-deer-realtors',
   },
   openGraph: {
     title: 'Red Deer Realtors & Real Estate Agents | Calgary Realtor Finder',
     description:
-      'Find licensed Red Deer realtors and real estate agents in Central Alberta. Free REALTOR® matching service. Verified RECA-licensed agents only.',
+      'Find licensed Red Deer realtors and real estate agents in Central Alberta. Free REALTOR® matching service. Verified licensed agents only.',
     url: 'https://calgaryrealtorfinder.ca/red-deer-realtors',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -65,7 +65,7 @@ export default function RedDeerRealtorsPage() {
         <p className="text-charcoal/60 text-lg mt-4 leading-relaxed max-w-2xl">
           Red Deer sits at the centre of Alberta's corridor between Calgary and Edmonton, with a
           market that reflects both cities' cycles but at significantly lower price points. We
-          connect Red Deer buyers and sellers with RECA-licensed agents who know Central Alberta's
+          connect Red Deer buyers and sellers with licensed agents who know Central Alberta's
           unique market conditions.
         </p>
         <div className="mt-12 p-8 bg-charcoal/5 rounded-sm border border-charcoal/10">

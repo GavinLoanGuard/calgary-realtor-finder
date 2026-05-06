@@ -45,7 +45,7 @@ const homepageSchema = JSON.stringify([
     {
       question: 'How do I find a realtor in Calgary?',
       answer:
-        'Use our free matching service. Fill out our form with your neighbourhood, timeline, and budget and we will introduce you to a RECA-licensed REALTOR® who specializes in your area within a few hours.',
+        'Use our free matching service. Fill out our form with your neighbourhood, timeline, and budget and we will introduce you to a licensed REALTOR® who specializes in your area within a few hours.',
     },
     {
       question: 'What does a Calgary realtor cost?',
@@ -60,7 +60,7 @@ const homepageSchema = JSON.stringify([
     {
       question: 'How do I know if a Calgary realtor is licensed?',
       answer:
-        'All Alberta REALTORS® are licensed through RECA — the Real Estate Council of Alberta. Search the RECA public registry at reca.ca by agent name to verify license status, brokerage, and disciplinary history.',
+        'All Alberta REALTORS® are licensed through the Real Estate Council of Alberta — the Real Estate Council of Alberta. Search the Alberta's public real estate registry at realestate.alberta.ca by agent name to verify license status, brokerage, and disciplinary history.',
     },
   ]),
 ])
@@ -224,7 +224,7 @@ export default function Home() {
                   offers on streets you're considering.
                 </p>
                 <p>
-                  Look for three things. First, a current RECA licence — every practicing agent in
+                  Look for three things. First, a current Alberta real estate licence — every practicing agent in
                   Alberta is required to hold one, and you can verify it in seconds on the Real
                   Estate Council of Alberta's public registry. Second, neighbourhood specificity. An
                   agent who claims to 'serve all of Calgary' is rarely as useful as one who has

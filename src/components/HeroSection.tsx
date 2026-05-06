@@ -35,7 +35,7 @@ export default function HeroSection() {
               Most Calgary buyers and sellers pick an agent by accident. Our free matching service connects you with a vetted, licensed REALTOR® who knows your neighbourhood — no fees, no obligation.
             </p>
             <div className="flex flex-wrap gap-6 mt-8">
-              {(['RECA-licensed only', 'No-cost matching', 'Local Calgary expertise'] as const).map((badge) => (
+              {(['Licensed agents only', 'No-cost matching', 'Local Calgary expertise'] as const).map((badge) => (
                 <div key={badge} className="flex items-center gap-2">
                   <CheckCircle size={14} className="text-accent shrink-0" />
                   <span className="font-inter text-white/80 text-sm">{badge}</span>
@@ -47,7 +47,7 @@ export default function HeroSection() {
             <div className="hidden md:flex items-center gap-4 mt-8 bg-white/10 backdrop-blur-sm border border-white/20 rounded-sm p-4 max-w-sm shadow-lg">
               <div className="w-14 h-14 rounded-sm overflow-hidden shrink-0 bg-primary/40">
                 <Image
-                  src="/nathan-koenigsberg.webp"
+                  src="/images/nathan-main.jpg"
                   alt="Nathan Koenigsberg — Calgary REALTOR®"
                   width={56}
                   height={56}

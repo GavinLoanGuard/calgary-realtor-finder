@@ -3,11 +3,11 @@ export const nathan = {
   title: 'Licensed Calgary REALTOR®',
   brokerage: 'RE/MAX First',
   brokerageAddress: '115, 8820 Blackfoot Trail SE, Calgary, T2J 3J1',
-  licenseNumber: '[NATHAN_LICENSE_NUMBER]', // TODO: Replace with real RECA number
+  licenseNumber: '[NATHAN_LICENSE_NUMBER]', // TODO: Replace with real licence number
   phone: '[NATHAN_PHONE]', // TODO: Replace with real number
   email: 'nathan@nathankoenigsberg.ca',
   website: 'https://nathankoenigsberg.ca',
-  photo: '/NathanKoenigsberg_headshot.webp',
+  photo: '/images/nathan-main.jpg',
   photoAlt: 'Nathan Koenigsberg — Licensed Calgary REALTOR® with RE/MAX First',
   yearsExperience: 13,
   areasServed: [

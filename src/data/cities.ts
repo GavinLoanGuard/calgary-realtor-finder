@@ -1,5 +1,5 @@
 // Agent counts are estimates for placeholder purposes.
-// Verify against RECA public registry before launch and update accordingly.
+// Verify against Alberta's public real estate registry before launch and update accordingly.
 export const albertaCities = [
   { name: 'Calgary', slug: 'calgary', region: 'AB · South', agentCount: 7400 },
   { name: 'Edmonton', slug: 'edmonton', region: 'AB · Capital', agentCount: 428 },

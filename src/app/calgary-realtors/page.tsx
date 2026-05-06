@@ -8,14 +8,14 @@ import { nathan } from '@/data/nathan'
 export const metadata: Metadata = {
   title: 'Best Calgary Realtors & Real Estate Agents | Calgary Realtor Finder',
   description:
-    'Find the best Calgary realtors and real estate agents. Compare RECA-licensed REALTORS® by neighbourhood, get matched for free. No obligation.',
+    'Find the best Calgary realtors and real estate agents. Compare licensed REALTORS® by neighbourhood, get matched for free. No obligation.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/calgary-realtors',
   },
   openGraph: {
     title: 'Best Calgary Realtors & Real Estate Agents | Calgary Realtor Finder',
     description:
-      'Find the best Calgary realtors and real estate agents. Compare RECA-licensed REALTORS® by neighbourhood, get matched for free. No obligation.',
+      'Find the best Calgary realtors and real estate agents. Compare licensed REALTORS® by neighbourhood, get matched for free. No obligation.',
     url: 'https://calgaryrealtorfinder.ca/calgary-realtors',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -47,12 +47,12 @@ export default function CalgaryRealtorsPage() {
       {
         question: 'Who are the best realtors in Calgary?',
         answer:
-          'The best Calgary realtor depends on your specific neighbourhood and transaction type. Rather than a single ranked list, we match buyers and sellers with RECA-licensed agents who have verifiable closed transactions in your specific area. Use our matching form to get introduced to the right agent for your situation.',
+          'The best Calgary realtor depends on your specific neighbourhood and transaction type. Rather than a single ranked list, we match buyers and sellers with licensed agents who have verifiable closed transactions in your specific area. Use our matching form to get introduced to the right agent for your situation.',
       },
       {
         question: 'How do I find a reputable Calgary real estate agent?',
         answer:
-          "Start by verifying their RECA license on the Real Estate Council of Alberta's public registry. Then look for neighbourhood-specific transaction history — an agent with 10 closed deals in your target area in the last two years is more valuable than a high-volume agent who works across the entire city.",
+          "Start by verifying their Alberta real estate licence on the Real Estate Council of Alberta's public registry. Then look for neighbourhood-specific transaction history — an agent with 10 closed deals in your target area in the last two years is more valuable than a high-volume agent who works across the entire city.",
       },
       {
         question: 'What areas do Calgary realtors serve?',
@@ -118,7 +118,7 @@ export default function CalgaryRealtorsPage() {
               Find the right Calgary REALTOR® for your neighbourhood.
             </h2>
             <p className="text-white/70 mt-3 leading-relaxed">
-              We match buyers and sellers with RECA-licensed Calgary real estate agents who have
+              We match buyers and sellers with licensed Calgary real estate agents who have
               verified transaction history in your specific area. Most matches happen within a few
               hours.
             </p>
@@ -137,7 +137,7 @@ export default function CalgaryRealtorsPage() {
             </h2>
             <p>
               Calgary is home to over 7,400 licensed REALTORS® regulated by the Real Estate Council
-              of Alberta (RECA). The city&apos;s real estate market spans four distinct quadrants — NE,
+              of Alberta. The city&apos;s real estate market spans four distinct quadrants — NE,
               NW, SW, and SE — plus the City Centre, each with its own price dynamics, community
               character, and buyer profile. Finding the right agent means finding one who knows your
               specific quadrant, your target neighbourhood, and your price band specifically.
@@ -192,7 +192,7 @@ export default function CalgaryRealtorsPage() {
               committing.
             </p>
             <p>
-              Verified transaction history is accessible through RECA&apos;s public registry and through
+              Verified transaction history is accessible through the public real estate registry and through
               the agent&apos;s own sales history. Look for consistent volume in your price range, not just
               headline-making luxury sales. An agent who primarily works $2M+ properties may not be
               the best fit for a $650K SE Calgary purchase.
@@ -204,19 +204,19 @@ export default function CalgaryRealtorsPage() {
             </p>
 
             <h2 className="font-playfair text-2xl font-bold text-primary mt-8">
-              RECA Licensing — What It Means for Calgary Buyers and Sellers
+              Licensing — What It Means for Calgary Buyers and Sellers
             </h2>
             <p>
               All practicing REALTORS® in Alberta — including Calgary — must hold a current license
-              issued by the Real Estate Council of Alberta (RECA). RECA regulates licensing, sets
+              issued by the Real Estate Council of Alberta, which regulates licensing, sets
               conduct standards, and maintains a public registry where anyone can verify an
               agent&apos;s current status, brokerage affiliation, and disciplinary history in seconds.
             </p>
             <p>
-              Every agent we feature on Calgary Realtor Finder has been verified through the RECA
+              Every agent we feature on Calgary Realtor Finder has been verified through the Alberta real estate registry
               public registry before any introduction is made. License status, brokerage standing,
               and license type are all confirmed. If you ever want to verify an agent independently,
-              visit reca.ca and search by name.
+              visit realestate.alberta.ca and search by name.
             </p>
           </div>
 

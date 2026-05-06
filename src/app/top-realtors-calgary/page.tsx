@@ -8,14 +8,14 @@ import { nathan } from '@/data/nathan'
 export const metadata: Metadata = {
   title: 'Top Realtors in Calgary 2026 | Calgary Realtor Finder',
   description:
-    'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are RECA-licensed and independently vetted. Free matching.',
+    'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are licensed and independently vetted. Free matching.',
   alternates: {
     canonical: 'https://calgaryrealtorfinder.ca/top-realtors-calgary',
   },
   openGraph: {
     title: 'Top Realtors in Calgary 2026 | Calgary Realtor Finder',
     description:
-      'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are RECA-licensed and independently vetted. Free matching.',
+      'Find top-rated Calgary realtors with verified reviews and transaction history. Featured agents are licensed and independently vetted. Free matching.',
     url: 'https://calgaryrealtorfinder.ca/top-realtors-calgary',
     siteName: 'Calgary Realtor Finder',
     locale: 'en_CA',
@@ -47,7 +47,7 @@ export default function TopRealtorsCalgaryPage() {
       {
         question: 'How are Calgary realtors ranked?',
         answer:
-          "No independent body officially ranks Calgary realtors. Awards and rankings from brokerages reflect internal metrics. The most reliable indicators of realtor quality are RECA license standing, neighbourhood-specific transaction volume, verified client reviews, and days on market relative to list price.",
+          "No independent body officially ranks Calgary realtors. Awards and rankings from brokerages reflect internal metrics. The most reliable indicators of realtor quality are Alberta real estate licence standing, neighbourhood-specific transaction volume, verified client reviews, and days on market relative to list price.",
       },
       {
         question: 'What makes a top Calgary realtor?',
@@ -60,8 +60,8 @@ export default function TopRealtorsCalgaryPage() {
   const verificationSteps = [
     {
       number: '01',
-      title: 'RECA License Verification',
-      body: 'We confirm active license status, license type, and brokerage affiliation through the RECA public registry. Any disciplinary history is reviewed.',
+      title: 'Licence Verification',
+      body: 'We confirm active license status, license type, and brokerage affiliation through the Alberta's public real estate registry. Any disciplinary history is reviewed.',
     },
     {
       number: '02',
@@ -118,7 +118,7 @@ export default function TopRealtorsCalgaryPage() {
         <p className="text-charcoal/60 text-lg mt-4 leading-relaxed max-w-2xl">
           Calgary has over 7,400 licensed REALTORS® — finding the ones who are genuinely
           exceptional in your specific neighbourhood and price range requires more than a Google
-          search. Our featured agents are independently vetted for RECA license status, brokerage
+          search. Our featured agents are independently vetted for Alberta real estate licence status, brokerage
           standing, neighbourhood transaction history, and client satisfaction.
         </p>
 
@@ -135,7 +135,7 @@ export default function TopRealtorsCalgaryPage() {
               reviews — they&apos;re the ones whose clients come back and refer their friends.
             </p>
             <p>
-              RECA data shows over 7,400 licensed REALTORS® active in the Calgary metropolitan
+              Industry data shows over 7,400 licensed REALTORS® active in the Calgary metropolitan
               area. Of those, a relatively small percentage account for the majority of transactions
               in any given neighbourhood. Finding those agents — the ones with concentrated
               expertise in your specific area and price range — is exactly what our matching service

@@ -36,7 +36,7 @@ export const nathanSchema = {
     '@type': 'City',
     name: area,
   })),
-  hasCredential: 'RECA Licensed REALTOR®',
+  hasCredential: 'Licensed REALTOR®',
   telephone: nathan.phone,
   email: nathan.email,
   description: nathan.bio,

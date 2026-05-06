@@ -172,14 +172,19 @@ export default function Home() {
           </p>
           <p className="font-inter text-charcoal/60 text-sm mt-4">
             Explore communities:{' '}
-            <a href="/calgary/auburn-bay" className="text-accent hover:underline">Auburn Bay</a>{' · '}
-            <a href="/calgary/mckenzie-towne" className="text-accent hover:underline">McKenzie Towne</a>{' · '}
-            <a href="/calgary/cranston" className="text-accent hover:underline">Cranston</a>{' · '}
-            <a href="/calgary/canyon-meadows" className="text-accent hover:underline">Canyon Meadows</a>{' · '}
-            <a href="/calgary/west-springs" className="text-accent hover:underline">West Springs</a>{' · '}
-            <a href="/calgary/cougar-ridge" className="text-accent hover:underline">Cougar Ridge</a>{' · '}
-            <a href="/calgary/discovery-ridge" className="text-accent hover:underline">Discovery Ridge</a>{' · '}
-            <a href="/calgary/hamptons" className="text-accent hover:underline">Hamptons</a>
+            <Link href="/realtor-mahogany-calgary" className="text-accent hover:underline">Mahogany</Link>{' · '}
+            <Link href="/realtor-auburn-bay-calgary" className="text-accent hover:underline">Auburn Bay</Link>{' · '}
+            <Link href="/realtor-mckenzie-towne-calgary" className="text-accent hover:underline">McKenzie Towne</Link>{' · '}
+            <Link href="/realtor-cranston-calgary" className="text-accent hover:underline">Cranston</Link>{' · '}
+            <Link href="/realtor-seton-calgary" className="text-accent hover:underline">Seton</Link>{' · '}
+            <Link href="/realtor-aspen-woods-calgary" className="text-accent hover:underline">Aspen Woods</Link>{' · '}
+            <Link href="/realtor-signal-hill-calgary" className="text-accent hover:underline">Signal Hill</Link>{' · '}
+            <Link href="/realtor-discovery-ridge-calgary" className="text-accent hover:underline">Discovery Ridge</Link>{' · '}
+            <Link href="/realtor-tuscany-calgary" className="text-accent hover:underline">Tuscany</Link>{' · '}
+            <Link href="/realtor-rocky-ridge-calgary" className="text-accent hover:underline">Rocky Ridge</Link>{' · '}
+            <Link href="/realtor-okotoks" className="text-accent hover:underline">Okotoks</Link>{' · '}
+            <Link href="/realtor-airdrie" className="text-accent hover:underline">Airdrie</Link>{' · '}
+            <Link href="/realtor-cochrane" className="text-accent hover:underline">Cochrane</Link>
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             {calgaryNeighbourhoods.map((n) => (

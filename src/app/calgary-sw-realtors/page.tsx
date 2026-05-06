@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
 import Breadcrumb from '@/components/Breadcrumb'
 import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
@@ -68,10 +69,24 @@ export default function CalgarySWRealtorsPage() {
           price points from entry-level townhomes to luxury estates, all with quick access to the
           mountains via Highway 1.
         </p>
-        <div className="mt-12 p-8 bg-charcoal/5 rounded-sm border border-charcoal/10">
-          <p className="text-charcoal/40 text-sm text-center">
-            [ Full content coming in Session 7 ]
-          </p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { href: '/realtor-aspen-woods-calgary', name: 'Aspen Woods', desc: 'Luxury SW — private schools nearby, detached $700K–$1.5M.' },
+            { href: '/realtor-signal-hill-calgary', name: 'Signal Hill', desc: 'Mountain views + 69th St LRT. Detached $540K–$1M.' },
+            { href: '/realtor-evergreen-calgary', name: 'Evergreen', desc: 'Fish Creek Park boundary, strong schools. $530K–$900K.' },
+            { href: '/realtor-discovery-ridge-calgary', name: 'Discovery Ridge', desc: 'Griffith Woods access, large estate lots. $650K–$1.3M.' },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="block border border-charcoal/10 rounded-sm p-5 bg-white hover:border-accent hover:shadow-sm transition-all"
+            >
+              <p className="font-inter text-accent text-xs uppercase tracking-widest">Calgary SW</p>
+              <h3 className="font-playfair text-lg text-primary font-semibold mt-1">{c.name}</h3>
+              <p className="font-inter text-charcoal/60 text-sm mt-2 leading-relaxed">{c.desc}</p>
+              <span className="font-inter text-accent text-sm font-medium mt-3 inline-block">Find a REALTOR® →</span>
+            </Link>
+          ))}
         </div>
       </PageLayout>
     </>

@@ -61,7 +61,7 @@ export default function TopRealtorsCalgaryPage() {
     {
       number: '01',
       title: 'Licence Verification',
-      body: 'We confirm active license status, license type, and brokerage affiliation through the Alberta's public real estate registry. Any disciplinary history is reviewed.',
+      body: 'We confirm active license status, license type, and brokerage affiliation through the Alberta public real estate registry. Any disciplinary history is reviewed.',
     },
     {
       number: '02',

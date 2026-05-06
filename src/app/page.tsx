@@ -60,7 +60,7 @@ const homepageSchema = JSON.stringify([
     {
       question: 'How do I know if a Calgary realtor is licensed?',
       answer:
-        'All Alberta REALTORS® are licensed through the Real Estate Council of Alberta — the Real Estate Council of Alberta. Search the Alberta's public real estate registry at realestate.alberta.ca by agent name to verify license status, brokerage, and disciplinary history.',
+        'All Alberta REALTORS® must hold a valid provincial licence. You can verify any agent\'s licence status, brokerage affiliation, and disciplinary history through the public Alberta real estate registry.',
     },
   ]),
 ])

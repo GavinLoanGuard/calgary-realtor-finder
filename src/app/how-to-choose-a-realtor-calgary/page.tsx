@@ -43,7 +43,7 @@ export default function HowToChooseRealtorPage() {
       {
         question: 'What should I look for in a Calgary realtor?',
         answer:
-          'Three things matter most: current Alberta real estate licensing (verifiable on the Alberta's public real estate registry), neighbourhood-specific transaction history in your target area, and communication style. A great agent for McKenzie Towne may not be the right fit for Tuscany — local expertise at the neighbourhood level matters more than total volume.',
+          'Three things matter most: current Alberta real estate licensing (verifiable on the Alberta public real estate registry), neighbourhood-specific transaction history in your target area, and communication style. A great agent for McKenzie Towne may not be the right fit for Tuscany — local expertise at the neighbourhood level matters more than total volume.',
       },
       {
         question: 'What questions should I ask a realtor before hiring them?',
@@ -53,7 +53,7 @@ export default function HowToChooseRealtorPage() {
       {
         question: "How do I verify a Calgary realtor's license?",
         answer:
-          "Visit the Alberta's public real estate registry at realestate.alberta.ca and search by the agent's name. You'll see their current license status, brokerage affiliation, license type, and any disciplinary history. Every agent we feature has been verified through this registry before being introduced.",
+          "Visit the Alberta public real estate registry at realestate.alberta.ca and search by the agent's name. You'll see their current license status, brokerage affiliation, license type, and any disciplinary history. Every agent we feature has been verified through this registry before being introduced.",
       },
       {
         question: 'What are red flags when choosing a Calgary realtor?',

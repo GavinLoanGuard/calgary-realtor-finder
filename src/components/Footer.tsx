@@ -12,20 +12,30 @@ const quickLinks = [
 ]
 
 const neighbourhoodLinks = [
-  { label: 'Calgary NE', href: '/calgary-ne-realtors' },
-  { label: 'Calgary NW', href: '/calgary-nw-realtors' },
-  { label: 'Calgary SW', href: '/calgary-sw-realtors' },
-  { label: 'Calgary SE', href: '/calgary-se-realtors' },
-  { label: 'City Centre', href: '/calgary-city-centre-realtors' },
-  { label: 'Airdrie · Cochrane · Okotoks', href: '/alberta-cities' },
+  { label: 'Mahogany', href: '/realtor-mahogany-calgary' },
+  { label: 'Auburn Bay', href: '/realtor-auburn-bay-calgary' },
+  { label: 'McKenzie Towne', href: '/realtor-mckenzie-towne-calgary' },
+  { label: 'Tuscany', href: '/realtor-tuscany-calgary' },
+  { label: 'Aspen Woods', href: '/realtor-aspen-woods-calgary' },
+  { label: 'Signal Hill', href: '/realtor-signal-hill-calgary' },
+  { label: 'Okotoks', href: '/realtor-okotoks' },
+  { label: 'Airdrie', href: '/realtor-airdrie' },
+  { label: 'Cochrane', href: '/realtor-cochrane' },
+]
+
+const quickLinks2 = [
+  { label: 'How much is a REALTOR®?', href: '/how-much-does-a-realtor-cost-calgary' },
+  { label: 'First-time buyer guide', href: '/first-time-home-buyer-calgary-realtor' },
+  { label: 'Selling your home', href: '/selling-your-home-calgary' },
+  { label: 'REALTOR® vs. private sale', href: '/calgary-realtor-vs-private-sale' },
 ]
 
 export default function Footer() {
   return (
     <footer className="bg-primary" data-hide-sticky="true">
       <div className="mx-auto max-w-7xl px-8 py-16">
-        {/* Four column grid */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+        {/* Five column grid */}
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           {/* Column 1 — Brand */}
           <div>
             <Link href="/" className="flex items-center gap-3">
@@ -66,13 +76,31 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 — Calgary Neighbourhoods */}
+          {/* Column 3 — Communities */}
           <div>
             <h3 className="font-inter font-semibold text-white text-sm tracking-widest uppercase mb-4">
-              Calgary Neighbourhoods
+              Communities
             </h3>
             <div className="flex flex-col gap-2">
               {neighbourhoodLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-inter text-white/60 text-sm hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Column 4 — Guides */}
+          <div>
+            <h3 className="font-inter font-semibold text-white text-sm tracking-widest uppercase mb-4">
+              Buyer &amp; Seller Guides
+            </h3>
+            <div className="flex flex-col gap-2">
+              {quickLinks2.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

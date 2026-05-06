@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Link from 'next/link'
 import PageLayout from '@/components/PageLayout'
 import Breadcrumb from '@/components/Breadcrumb'
 import { localBusinessSchema, breadcrumbSchema, faqSchema } from '@/data/schema'
@@ -68,10 +69,23 @@ export default function CalgaryNWRealtorsPage() {
           Calgary is known for its proximity to the mountains, strong school catchments, and some
           of Calgary's most sought-after family neighbourhoods.
         </p>
-        <div className="mt-12 p-8 bg-charcoal/5 rounded-sm border border-charcoal/10">
-          <p className="text-charcoal/40 text-sm text-center">
-            [ Full content coming in Session 7 ]
-          </p>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { href: '/realtor-tuscany-calgary', name: 'Tuscany', desc: 'End-of-line CTrain, Tuscany Club. Detached $540K–$950K.' },
+            { href: '/realtor-rocky-ridge-calgary', name: 'Rocky Ridge', desc: 'Elevated mountain views, Shane Homes YMCA. $500K–$950K.' },
+            { href: '/realtor-royal-oak-calgary', name: 'Royal Oak', desc: 'Cul-de-sac family streets, in-community schools. $530K–$950K.' },
+          ].map((c) => (
+            <Link
+              key={c.href}
+              href={c.href}
+              className="block border border-charcoal/10 rounded-sm p-5 bg-white hover:border-accent hover:shadow-sm transition-all"
+            >
+              <p className="font-inter text-accent text-xs uppercase tracking-widest">Calgary NW</p>
+              <h3 className="font-playfair text-lg text-primary font-semibold mt-1">{c.name}</h3>
+              <p className="font-inter text-charcoal/60 text-sm mt-2 leading-relaxed">{c.desc}</p>
+              <span className="font-inter text-accent text-sm font-medium mt-3 inline-block">Find a REALTOR® →</span>
+            </Link>
+          ))}
         </div>
       </PageLayout>
     </>

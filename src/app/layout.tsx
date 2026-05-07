@@ -28,8 +28,9 @@ export const metadata: Metadata = {
   description:
     'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
   icons: {
-    icon: [{ url: '/images/Balloon_Mark_RGB.png', sizes: '32x32', type: 'image/png' }],
-    apple: [{ url: '/images/Balloon_Mark_RGB.png', sizes: '180x180', type: 'image/png' }],
+    icon: [{ url: '/favicon.png', sizes: '500x500', type: 'image/png' }],
+    apple: [{ url: '/favicon.png', sizes: '500x500', type: 'image/png' }],
+    shortcut: '/favicon.png',
   },
   keywords: [
     'Calgary realtor',

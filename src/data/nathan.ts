@@ -4,7 +4,7 @@ export const nathan = {
   brokerage: 'RE/MAX First',
   brokerageAddress: '115, 8820 Blackfoot Trail SE, Calgary, T2J 3J1',
   licenseNumber: '[NATHAN_LICENSE_NUMBER]', // TODO: Replace with real licence number
-  phone: '[NATHAN_PHONE]', // TODO: Replace with real number
+  phone: '(403) 668-9264',
   email: 'nathan@nathankoenigsberg.ca',
   website: 'https://nathankoenigsberg.ca',
   photo: '/images/nathan-main.jpg',

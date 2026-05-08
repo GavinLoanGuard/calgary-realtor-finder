@@ -16,7 +16,7 @@ export const organizationSchema = {
   },
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+1-403-465-3937',
+    telephone: '+1-403-668-9264',
     contactType: 'customer service',
   },
 }

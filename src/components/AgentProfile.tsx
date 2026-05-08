@@ -31,7 +31,7 @@ export default function AgentProfile() {
                 ◆ RE/MAX FIRST
               </span>
               <span className="font-inter rounded-full border text-xs px-3 py-1 font-medium bg-primary/10 text-primary border-primary/20">
-                ● 403-465-3937
+                ● 403-668-9264
               </span>
             </div>
 

@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'West Springs Calgary Homes for Sale | REALTOR® Match | Calgary Realtor Finder',
   description:
     'Find West Springs Calgary homes for sale. Get matched with a licensed West Calgary REALTOR® who knows West Springs and the surrounding communities. Free, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/west-springs',
+  },
+  openGraph: {
+    title: 'West Springs Calgary Homes for Sale | Calgary Realtor Finder',
+    description:
+      'Find West Springs Calgary homes for sale. Get matched with a licensed West Calgary REALTOR® who knows West Springs and the surrounding communities. Free, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/west-springs',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'West Springs Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

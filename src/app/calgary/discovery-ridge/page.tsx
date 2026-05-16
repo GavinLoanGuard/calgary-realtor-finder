@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Discovery Ridge Homes for Sale Calgary | REALTOR® | Calgary Realtor Finder',
   description:
     'Searching for Discovery Ridge real estate in Calgary? Get matched with a licensed REALTOR® who specializes in this sought-after SW community. Free, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/discovery-ridge',
+  },
+  openGraph: {
+    title: 'Discovery Ridge Homes for Sale Calgary | Calgary Realtor Finder',
+    description:
+      'Searching for Discovery Ridge real estate in Calgary? Get matched with a licensed REALTOR® who specializes in this sought-after SW community. Free, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/discovery-ridge',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Discovery Ridge Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

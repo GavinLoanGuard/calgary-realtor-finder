@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Mahogany Homes for Sale Calgary SE | REALTOR® Match | Calgary Realtor Finder',
   description:
     "Find homes for sale in Mahogany Calgary SE. Get matched with a licensed REALTOR® who specializes in Mahogany real estate — Calgary's award-winning lake community. Free, no obligation.",
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/mahogany',
+  },
+  openGraph: {
+    title: 'Mahogany Homes for Sale Calgary SE | Calgary Realtor Finder',
+    description:
+      "Find homes for sale in Mahogany Calgary SE. Get matched with a licensed REALTOR® who specializes in Mahogany real estate — Calgary's award-winning lake community. Free, no obligation.",
+    url: 'https://calgaryrealtorfinder.ca/calgary/mahogany',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Mahogany Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

@@ -23,6 +23,26 @@ export const metadata: Metadata = {
   },
   description:
     'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca',
+  },
+  openGraph: {
+    title: 'Calgary Realtor Finder | Find a Calgary REALTOR®',
+    description:
+      'Connect with top Calgary REALTORS® including Nathan Koenigsberg of RE/MAX First. Browse live MLS listings and get matched with the right agent for your area.',
+    url: 'https://calgaryrealtorfinder.ca',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [
+      {
+        url: '/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: "Calgary Realtor Finder — Alberta's Local Realtor Resource",
+      },
+    ],
+  },
 }
 
 const distanceLabels: Record<string, string> = {

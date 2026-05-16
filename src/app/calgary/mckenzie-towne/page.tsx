@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'McKenzie Towne Houses for Sale | Calgary REALTOR® | Calgary Realtor Finder',
   description:
     'Searching for McKenzie Towne houses for sale in Calgary SE? Connect with a licensed REALTOR® who knows McKenzie Towne inside out. Free matching, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/mckenzie-towne',
+  },
+  openGraph: {
+    title: 'McKenzie Towne Houses for Sale | Calgary Realtor Finder',
+    description:
+      'Searching for McKenzie Towne houses for sale in Calgary SE? Connect with a licensed REALTOR® who knows McKenzie Towne inside out. Free matching, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/mckenzie-towne',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'McKenzie Towne Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

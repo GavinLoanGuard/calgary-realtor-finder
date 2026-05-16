@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: '[GOOGLE_SEARCH_CONSOLE_VERIFICATION_TOKEN]',
+    google: 'hkUQKn9qHRGEx_hqvkuMHEjRNO1IYAdZqBSKQswTEIM',
   },
 }
 

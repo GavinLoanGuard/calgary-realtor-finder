@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Evergreen Calgary Homes for Sale | REALTOR® Match | Calgary Realtor Finder',
   description:
     'Looking for houses for sale in Evergreen Calgary SW? Get matched with a licensed REALTOR® who knows this established Fish Creek community. Free, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/evergreen',
+  },
+  openGraph: {
+    title: 'Evergreen Calgary Homes for Sale | Calgary Realtor Finder',
+    description:
+      'Looking for houses for sale in Evergreen Calgary SW? Get matched with a licensed REALTOR® who knows this established Fish Creek community. Free, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/evergreen',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Evergreen Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

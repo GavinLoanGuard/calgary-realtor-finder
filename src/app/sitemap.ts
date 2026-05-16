@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy',
     '/terms',
     '/accessibility',
+    '/listings',
   ]
 
   const neighbourhoodRoutes = [

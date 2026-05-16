@@ -5,6 +5,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Terms of Service | Calgary Realtor Finder',
   description: 'Terms of service for Calgary Realtor Finder. Conditions governing use of our free realtor matching service.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/terms',
+  },
 }
 
 export default function TermsPage() {

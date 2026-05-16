@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Auburn Bay Homes for Sale | Find a Calgary REALTOR® | Calgary Realtor Finder',
   description:
     'Looking for homes for sale in Auburn Bay, Calgary? Get matched with a licensed REALTOR® who specializes in Auburn Bay real estate. Free, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/auburn-bay',
+  },
+  openGraph: {
+    title: 'Auburn Bay Homes for Sale | Calgary Realtor Finder',
+    description:
+      'Looking for homes for sale in Auburn Bay, Calgary? Get matched with a licensed REALTOR® who specializes in Auburn Bay real estate. Free, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/auburn-bay',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Auburn Bay Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

@@ -5,6 +5,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Accessibility | Calgary Realtor Finder',
   description: 'Accessibility statement for Calgary Realtor Finder. Our commitment to accessible real estate information.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/accessibility',
+  },
 }
 
 export default function AccessibilityPage() {

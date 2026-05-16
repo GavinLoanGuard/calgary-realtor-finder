@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Copperfield Calgary Homes for Sale | REALTOR® Match | Calgary Realtor Finder',
   description:
     'Find homes for sale in Copperfield Calgary SE. Get matched with a licensed REALTOR® who specializes in Copperfield real estate. Free, no obligation.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/calgary/copperfield',
+  },
+  openGraph: {
+    title: 'Copperfield Calgary Homes for Sale | Calgary Realtor Finder',
+    description:
+      'Find homes for sale in Copperfield Calgary SE. Get matched with a licensed REALTOR® who specializes in Copperfield real estate. Free, no obligation.',
+    url: 'https://calgaryrealtorfinder.ca/calgary/copperfield',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Copperfield Calgary — Calgary Realtor Finder' }],
+  },
 }
 
 const pageSchema = JSON.stringify([

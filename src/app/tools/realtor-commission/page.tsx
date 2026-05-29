@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: "Calgary REALTOR® Commission Calculator | Estimate Your Real Estate Fees in Alberta",
   description:
     "Calculate estimated REALTOR® commission costs for selling your Calgary home. See the breakdown of listing agent fees, buyer agent fees, and GST. Free Alberta commission calculator.",
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/tools/realtor-commission',
+  },
+  openGraph: {
+    title: 'Calgary REALTOR® Commission Calculator | Estimate Your Real Estate Fees in Alberta',
+    description:
+      'Calculate estimated REALTOR® commission costs for selling your Calgary home. See the breakdown of listing agent fees, buyer agent fees, and GST. Free Alberta commission calculator.',
+    url: 'https://calgaryrealtorfinder.ca/tools/realtor-commission',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+  },
 }
 
 const faqSchema = JSON.stringify({

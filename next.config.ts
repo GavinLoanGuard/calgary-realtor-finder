@@ -48,6 +48,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.calgaryrealtorfinder.ca' }],
+        destination: 'https://calgaryrealtorfinder.ca/:path*',
+        permanent: true,
+      },
+      {
         source: '/calgary',
         destination: '/calgary-realtors',
         permanent: true,

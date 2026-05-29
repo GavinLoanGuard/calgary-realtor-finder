@@ -7,6 +7,18 @@ export const metadata: Metadata = {
   title: 'Calgary Mortgage Affordability Calculator | What Can You Afford in Calgary?',
   description:
     'Find out what house price you can afford in Calgary. Enter your income and down payment to calculate your maximum mortgage, monthly payment, and stress test result. Free tool.',
+  alternates: {
+    canonical: 'https://calgaryrealtorfinder.ca/tools/mortgage-affordability',
+  },
+  openGraph: {
+    title: 'Calgary Mortgage Affordability Calculator | What Can You Afford in Calgary?',
+    description:
+      'Find out what house price you can afford in Calgary. Enter your income and down payment to calculate your maximum mortgage, monthly payment, and stress test result. Free tool.',
+    url: 'https://calgaryrealtorfinder.ca/tools/mortgage-affordability',
+    siteName: 'Calgary Realtor Finder',
+    locale: 'en_CA',
+    type: 'website',
+  },
 }
 
 const faqSchema = JSON.stringify({

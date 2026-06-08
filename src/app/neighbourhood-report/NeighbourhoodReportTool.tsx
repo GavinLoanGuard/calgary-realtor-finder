@@ -298,7 +298,11 @@ export default function NeighbourhoodReportTool() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
-        if (data?.error === 'parse_failed') {
+        if (data?.error === 'key_missing') {
+          setReportError(
+            "Report service isn't configured yet — the ANTHROPIC_API_KEY environment variable needs to be set in Vercel. Please call Nathan directly at (403) 465-3937 in the meantime."
+          )
+        } else if (data?.error === 'parse_failed') {
           setReportError(
             "We had trouble generating your report. Please call Nathan directly at (403) 465-3937."
           )

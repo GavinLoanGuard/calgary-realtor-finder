@@ -11,7 +11,8 @@ export async function POST(request: NextRequest) {
 
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
-      return NextResponse.json({ error: 'Report service unavailable' }, { status: 503 })
+      console.error('ANTHROPIC_API_KEY is not set — add it to your Vercel environment variables or .env.local')
+      return NextResponse.json({ error: 'key_missing' }, { status: 503 })
     }
 
     const prompt = `You are a Calgary real estate market analyst. Generate a realistic and helpful neighbourhood market report for a Calgary homeowner or buyer. Use plausible Calgary market data based on your knowledge of the Calgary real estate market as of 2025-2026. Be specific and useful — not generic.

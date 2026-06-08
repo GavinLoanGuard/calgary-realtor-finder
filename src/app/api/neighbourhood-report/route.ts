@@ -15,7 +15,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'key_missing' }, { status: 503 })
     }
 
+    const now = new Date()
+    const reportDate = now.toLocaleString('en-CA', { month: 'long', year: 'numeric', timeZone: 'America/Edmonton' })
+
     const prompt = `You are a Calgary real estate market analyst. Generate a realistic and helpful neighbourhood market report for a Calgary homeowner or buyer. Use plausible Calgary market data based on your knowledge of the Calgary real estate market as of 2025-2026. Be specific and useful — not generic.
+
+Today's date: ${reportDate}
 
 User inputs:
 - Neighbourhood: ${neighbourhood}
@@ -27,7 +32,7 @@ Generate a JSON response only. No preamble, no markdown, no backticks. Return ex
 
 {
   "neighbourhood": "string — confirmed neighbourhood name",
-  "report_date": "string — current month and year",
+  "report_date": "string — use exactly: ${reportDate}",
   "market_temperature": "string — one of: Hot / Balanced / Cooling",
   "market_temperature_description": "string — 1 sentence explaining current conditions in this neighbourhood",
   "avg_sale_price": "string — realistic average sale price formatted as $XXX,XXX",

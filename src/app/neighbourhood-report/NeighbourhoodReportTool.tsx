@@ -194,6 +194,8 @@ export default function NeighbourhoodReportTool() {
   const [reportError, setReportError] = useState('')
   const [toolInteracted, setToolInteracted] = useState(false)
   const [longRunning, setLongRunning] = useState(false)
+  const [callBooked, setCallBooked] = useState(false)
+  const [bookingCall, setBookingCall] = useState(false)
 
   const reportRef = useRef<HTMLDivElement>(null)
   const step2Ref = useRef<HTMLDivElement>(null)
@@ -218,6 +220,32 @@ export default function NeighbourhoodReportTool() {
     const id = setTimeout(() => setLongRunning(true), 15000)
     return () => clearTimeout(id)
   }, [submitting])
+
+  async function handleBookCall() {
+    setBookingCall(true)
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: '0289f3a5-95d1-4863-9ccf-ef3924d6c7c5',
+          subject: `Call Request — ${firstName} — ${neighbourhood} Neighbourhood Report`,
+          from_name: firstName || 'Neighbourhood Report User',
+          email: email || 'not provided',
+          phone: phone || 'not provided',
+          neighbourhood,
+          intent: intent || 'Not specified',
+          priceRange: priceRange || 'Not specified',
+          timeline: timeline || 'Not specified',
+          source: 'neighbourhood-report CTA',
+        }),
+      })
+    } catch {
+      // Non-fatal — still show confirmation
+    }
+    setBookingCall(false)
+    setCallBooked(true)
+  }
 
   const scrollToRef = useCallback((ref: React.RefObject<HTMLDivElement | null>) => {
     setTimeout(() => {
@@ -644,23 +672,34 @@ export default function NeighbourhoodReportTool() {
                 neighbourhoods. He&apos;ll review your report with you and give you his honest take
                 — no pressure, no obligation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href="https://calendly.com/nathankoenigsberg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors text-sm"
-                >
-                  Book a Free 15-Minute Call with Nathan →
-                </a>
-                <a
-                  href="tel:4034653937"
-                  className="inline-flex items-center justify-center gap-2 bg-transparent border-[1.5px] border-white/40 hover:border-white text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors text-sm"
-                >
-                  <Phone size={15} />
-                  Call Nathan: (403) 465-3937
-                </a>
-              </div>
+              {callBooked ? (
+                <div className="bg-white/10 border border-white/20 rounded-xl px-6 py-4 text-center">
+                  <p className="font-inter font-semibold text-white text-sm">
+                    ✓ Request received — Nathan will be in touch shortly.
+                  </p>
+                  <p className="font-inter text-white/60 text-xs mt-1">
+                    Or call him directly: (403) 465-3937
+                  </p>
+                </div>
+              ) : (
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <button
+                    type="button"
+                    onClick={handleBookCall}
+                    disabled={bookingCall}
+                    className="inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-light disabled:opacity-60 text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors text-sm"
+                  >
+                    {bookingCall ? 'Sending...' : 'Book a Free 15-Minute Call with Nathan →'}
+                  </button>
+                  <a
+                    href="tel:4034653937"
+                    className="inline-flex items-center justify-center gap-2 bg-transparent border-[1.5px] border-white/40 hover:border-white text-white font-inter font-semibold py-3 px-6 rounded-lg transition-colors text-sm"
+                  >
+                    <Phone size={15} />
+                    Call Nathan: (403) 465-3937
+                  </a>
+                </div>
+              )}
               <p className="font-inter text-white/40 text-xs mt-4">
                 RE/MAX First · Calgary, Alberta · No obligation
               </p>
